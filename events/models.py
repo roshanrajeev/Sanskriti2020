@@ -8,3 +8,4 @@ class Event(models.Model):
     url = models.URLField()
     fees = models.IntegerField()
     prize = models.CharField(max_length=200)
+

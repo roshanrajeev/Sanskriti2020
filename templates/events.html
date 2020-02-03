@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events</title>
+</head>
+<body>
+
+</body>
+</html>
