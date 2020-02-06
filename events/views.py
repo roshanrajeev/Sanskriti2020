@@ -17,3 +17,12 @@ def detailview(request, pk):
 
 def home(request):
 	return render(request,'home.html')
+
+def aranguview(request):
+	return render(request,'arangu.html')
+
+def interview(request):
+	return render(request, 'inter.html')
+
+def filmfestview(request):
+	return render(request, 'filmfest.html')

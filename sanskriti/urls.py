@@ -16,14 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from events import views
-from events.views import EventView
 from django.conf.urls.static import static
+from events.models import Event
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('events/', views.EventView, name='EventView'),
     path('events/<int:pk>', views.detailview, name='detailsview'),
+    path('arangu/', views.aranguview, name='arangu'),
+    path('interevents/', views.interview, name='inter'),
+    path('filmfest/',views.filmfestview, name='filmfest'),
     #todo
     #path('events/<slug:slug>/', views.detailview, name='detailsview'),
 ]+static('/media/', document_root='media/')
