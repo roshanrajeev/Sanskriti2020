@@ -8,8 +8,12 @@ from django.views.generic.detail import DetailView
 
 def EventView(request):
 	events = Event.objects.all()
-	return render(request, 'home.html', {'events':events})
+	return render(request, 'events.html', {'events':events})
 
-def detailview(request):
-	events = get_object_or_404(Event,id=event_id)
+def detailview(request, pk):
+	events = get_object_or_404(Event,id=pk)
 	return render(request,'eventsdetail.html',{'events':events})
+
+
+def home(request):
+	return render(request,'home.html')

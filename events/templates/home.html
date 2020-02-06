@@ -1,32 +1,6 @@
 {% extends 'base.html' %}
 
-{% block breadcrumb %}
-  <li class="breadcrumb-item active">Events</li>
-{% endblock %}
-
 {% block content %}
-  <table class="table">
-    <thead class="thead-inverse">
-      <tr>
-        <th>Event</th>
-        <th>Fees</th>
-        <th>Prize</th>
-        <th>Reg Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for event in events %}
-        <tr>
-          <td>
-            <a href="{% url 'detailsview' event.pk %}">{{ event.name }}</a>
-            <small class="text-muted d-block">{{ event.description }}</small>
-          </td>
-          <td class="align-middle">{{ event.fees }}</td>
-          <td class="align-middle">{{ event.prize }}</td>
-          <td class="align-middle"><a href={{ event.url }}>{{ event.url }}</a></td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<h1>This is the homepage of SANSKRITI 2020</h1>
 {% endblock %}
 
