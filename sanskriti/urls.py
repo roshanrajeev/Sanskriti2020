@@ -27,6 +27,7 @@ urlpatterns = [
     path('arangu/', views.aranguview, name='arangu'),
     path('interevents/', views.interview, name='inter'),
     path('filmfest/',views.filmfestview, name='filmfest'),
+    
     #todo
     #path('events/<slug:slug>/', views.detailview, name='detailsview'),
 ]+static('/media/', document_root='media/')
