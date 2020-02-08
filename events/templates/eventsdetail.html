@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ events.name }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="post_thumbnail post__item">
+  	<img class="post__thumbnail__image" src="{{ events.image_thumbnail.url }}">
+  </div>
+  <li class="breadcrumb-item active">{{ events.name }}</li>
+
+  
+  
+{% endblock %}
+
+{% block content %}
+<p>{{ events.description }} - Slug: {{ events.slug }}</p>
+{% endblock %}
