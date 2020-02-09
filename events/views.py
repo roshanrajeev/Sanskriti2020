@@ -23,9 +23,9 @@ def EventView(request):
 	events = Event.objects.all()
 	return render(request, 'events.html', {'events':events})
 
-def detailview(request, pk):
-	events = get_object_or_404(Event,id=pk)
-	return render(request,'eventsdetail.html',{'events':events})
+def detailview(request, slug):
+	events = get_object_or_404(Event,slug=slug)
+	return render(request,'eventsdetail.html',{'events.slug':events.slug})
 
 
 def home(request):
