@@ -7,24 +7,14 @@ from django.views import generic
 
 # Create your views here.
 
-a = '''class detailview(generic.DetailView):
-	events=Event.objects.all()
-	model = Event
-	template_name='./templates/eventsdetail.html'
-	context_object_name= 'events'
-	local_context={'events':events}
-	
-	def get_queryset(self):
-		qs = super(detailview, self).get_queryset()
-		return qs.filter(pk=self.kwargs['pk'])'''
 
 
 def EventView(request):
 	events = Event.objects.all()
 	return render(request, 'events.html', {'events':events})
 
-def detailview(request, pk):
-	events = get_object_or_404(Event,id=pk)
+def detailview(request, slug):
+	events = get_object_or_404(Event,slug=slug)
 	return render(request,'eventsdetail.html',{'events':events})
 
 
