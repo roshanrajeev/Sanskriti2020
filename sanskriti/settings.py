@@ -10,7 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+
 import os
+import environ
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading .env file
+root = environ.Path(__file__) - 2
+environ.Env.read_env(root('.env'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,10 +30,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+^%490wt%$lr&uq&=)w%%f61_yjgg#79=0vr$ogxo7vs369mn&'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -71,22 +81,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sanskriti.wsgi.application'
 
-
+    
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sanskriti20',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
-    }
+    # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
+    'default': env.db(),
+    # read os.environ['SQLITE_URL']
+    'extra': env.db('SQLITE_URL', default='sqlite:////tmp/my-tmp-sqlite.db')
 }
+
 
 
 # Password validation
@@ -126,6 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 MEDIA_URL='/media/'
 MEDIA_ROOT='media/'

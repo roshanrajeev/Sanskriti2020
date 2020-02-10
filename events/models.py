@@ -38,7 +38,7 @@ class Event(models.Model):
     
     #Meta
     created_on=models.DateTimeField(auto_now_add=True, null=True   )
-    added_by = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
+    added_by = models.ForeignKey(get_user_model(),on_delete=models.CASCADE, null=True)
 
     #created_by=models.ForeignKey(User, related_name='Events',on_delete=models.CASCADE,auto_now_add=request.user.id )
     updated_on=models.DateTimeField(null=True, auto_now_add=True)
