@@ -46,7 +46,6 @@ class Event(models.Model):
     	return self.name
 
     def get_absolute_url(self):
-        #return reverse('detailview', kwargs={'slug': self.slug})
         url = reverse('detailview', kwargs={'slug': self.slug})
         return url
 

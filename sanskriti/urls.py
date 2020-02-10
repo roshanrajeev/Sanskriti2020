@@ -23,15 +23,9 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('events/', views.EventView, name='EventView'),
-    #path('events/<slug:slug>', views.detailview, name='detailview'), # new
-    #path('', ArticleListView.as_view(), name='article_list'),
     path('events/<slug:slug>/', views.detailview, name='detailview'),
-    #path('events/<int:pk>', views.detailview, name='detailview'),
     path('arangu/', views.aranguview, name='arangu'),
     path('interevents/', views.interview, name='inter'),
     path('filmfest/',views.filmfestview, name='filmfest'),
-    
-    #todo
-    #path('events/<slug:slug>/', views.detailview, name='detailsview'),
 ]+static('/media/', document_root='media/')
 

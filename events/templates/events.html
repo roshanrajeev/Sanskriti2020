@@ -18,7 +18,7 @@
       {% for event in events %}
         <tr>
           <td>
-            <a href="{% url 'detailview' event.pk %}">{{ event.name }}</a>
+            <a href="{% url 'detailview' event.slug %}">{{ event.name }}</a>
             <small class="text-muted d-block">{{ event.description }}</small>
           </td>
           <td class="align-middle">{{ event.fees }}</td>
@@ -30,3 +30,4 @@
   </table>
 {% endblock %}
 
+ 
