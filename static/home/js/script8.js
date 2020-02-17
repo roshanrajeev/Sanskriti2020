@@ -1,0 +1,1 @@
+$(".main-events-img1-container").velocity("fadeIn", { duration: 500 });

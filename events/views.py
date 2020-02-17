@@ -19,7 +19,7 @@ def detailview(request, slug):
 
 
 def home(request):
-	return render(request,'home.html')
+	return render(request,'home/index.html')
 
 def aranguview(request):
 	return render(request,'arangu.html')
