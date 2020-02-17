@@ -182,8 +182,8 @@
 		
 </nav><!-- #modal-navigation -->
 <div id="header-logo">
-	<h1><a href="./index.html">Mar Athanasius</a></h1>
-	<h2><a href="./index.html">College of Engineering</a></h2>
+	<h1><a href="/">Mar Athanasius</a></h1>
+	<h2><a href="/">College of Engineering</a></h2>
 </div>
 
 
@@ -201,8 +201,8 @@
 	
 <section id="home-feature-wrapper" class="wrapper viewport-height">
 	<div id="particles-js" class="viewport-height header_img" >
-		<script src='{% static "home/js/particle-js/particles.js" %}'></script>
-		<!-- <script>
+		<!-- <script src='{% static "home/js/particle-js/particles.js" %}'></script>
+		<script>
 			particlesJS.load('particles-js', '{% static "home/js/particle-js/particlesjs-config.json" %}', function() {
 				console.log('callback - particles.js config loaded');
 			});
@@ -797,7 +797,7 @@
 	<div id="footer-cta">
 		
 	
-	<a href="tickets/index.html" class="button arrow-button"><span>All Events</span></a>
+	<a href="{%url 'EventView' %}" class="button arrow-button"><span>All Events</span></a>
 	</div>
 	
 
