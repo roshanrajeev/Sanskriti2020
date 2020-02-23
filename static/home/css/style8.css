@@ -5,17 +5,34 @@
 }
 
 
-#particles-js{
-    background-image: url(../img/sanskriti-img/logo-back.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+#home-feature-wrapper .leaves{
     height: 820px !important;
 }
 
 
 #animated-headline img{
     width: 100%;
+    -webkit-animation: fade-in-anim 3s cubic-bezier(0.445, 0.050, 0.550, 0.950) 1.5s both;
+	animation: fade-in-anim 3s cubic-bezier(0.445, 0.050, 0.550, 0.950) 1.5s both;
 }
+@-webkit-keyframes fade-in-anim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-anim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
 @media (min-width: 960px){
     #nav-close{
         top:17px;
@@ -27,12 +44,9 @@
     }
 }
 
-#particles-js{
-    height: 820px ;
-}
 
 @media (max-width: 767px){
-    #home-feature-wrapper #particles-js{
+    #home-feature-wrapper .leaves{
         height: 600px ;
     }
 }
@@ -517,6 +531,27 @@
     margin: 0 50px 0 50px;
     font-family: 'Satisfy', cursive;
     color: #E9E36B;
+    background-color: none;
+}
+
+#other-main-events-container .inter-event h1,
+#other-main-events-container .alai-event h1,
+#other-main-events-container .jaalakam-event h1,
+#other-main-events-container .film-event h1{
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0px 10px;
+}
+
+#other-main-events .color-trans-effect{
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: all ease-in-out 100ms;
+}
+
+#other-main-events .color-trans-effect-add{
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    transition: all ease-in-out 100ms;
 }
 
 @media (max-width: 1450px){
@@ -620,12 +655,13 @@
     position: relative;
     bottom: -3px;
     /* background-color: rgb(212, 212, 212); */
-    background-color: #1E1F33;
+    background-color: #1c1d30;
     text-align: center;
     color: #08242A;
     font-family: 'Alegreya Sans', sans-serif;
     z-index: 1;
     font-size: 16px;
+    border-top: 1px solid rgba(14, 14, 20, 0.3);
 }
 
 #contact-section div{
@@ -696,7 +732,6 @@
 .contact-support{
     width: 500px;
     height: 300px;
-    background-color: #1E1F33;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

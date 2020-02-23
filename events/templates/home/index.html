@@ -82,6 +82,7 @@
 <link rel="stylesheet" href='{%static "home/css/hover.css"%}'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href='{%static "home/css/animate.css"%}'>
+<link rel="stylesheet" href='{%static "home/css/leavesAnim.css"%}'>
 
 
 
@@ -200,15 +201,39 @@
 
 	
 <section id="home-feature-wrapper" class="wrapper viewport-height">
-	<div id="particles-js" class="viewport-height header_img" >
-		<!-- <script src='{% static "home/js/particle-js/particles.js" %}'></script>
-		<script>
-			particlesJS.load('particles-js', '{% static "home/js/particle-js/particlesjs-config.json" %}', function() {
-				console.log('callback - particles.js config loaded');
-			});
-		</script> -->
-  	</div> <!-- #home-feature -->
-	  
+	<div class="viewport-height leaves" >
+		<div class="set set1">
+            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+        </div>
+        <div class="set set2">
+            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+        </div>
+        <div class="set set3">
+            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+        </div>
+	</div> <!-- #home-feature -->
+
 
   	<div id="animated-headline" class="sanskriti-logo">
 	  <img src='{% static "home/img/logo/logo.png" %}' alt="" class="logo-above">
@@ -254,6 +279,95 @@
 
 
 	
+<div class="leaves-set">
+	<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+	<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+	<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+	<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+	<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+	<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+	<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+	<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+</div>
+
+
+<style>
+	.leaves-set > div{
+		position: absolute;
+		top: 950px;
+		z-index: 1;
+		/* border: 1px solid white; */
+	}
+	.leaves-set div:nth-child(1){
+		left: 20%;
+		animation: leavesAnimate 50s linear infinite;
+		animation-delay: -7s;
+	}
+
+	.leaves-set div:nth-child(2){
+		left: 50%;
+		animation: leavesAnimate 60s linear infinite;
+		animation-delay: -5s;
+	}
+
+	.leaves-set div:nth-child(3){
+		left: 70%;
+		animation: leavesAnimate 70s linear infinite;
+	}
+
+	.leaves-set div:nth-child(4){
+		left: 0%;
+		animation: leavesAnimate 50s linear infinite;
+		animation-delay: -5s;
+	}
+
+	.leaves-set div:nth-child(5){
+		left: 85%;
+		animation: leavesAnimate 56s linear infinite;
+		animation-delay: -10s;
+	}
+
+	.leaves-set div:nth-child(6){
+		left: 0%;
+		animation: leavesAnimate 34s linear infinite;
+	}
+
+	.leaves-set div:nth-child(7){
+		left: 15%;
+		animation: leavesAnimate 58s linear infinite;
+	}
+
+	.leaves-set div:nth-child(8){
+		left: 60%;
+		animation: leavesAnimate 60s linear infinite;
+	}
+
+	@keyframes leavesAnimate{
+		0%{
+			top: 950px;
+			opacity: 0;
+		}
+		10%{
+			opacity: 0.5;
+		}
+		20%{
+			transform: translateX(-20px) rotate(45deg);
+		}
+		40%{
+			transform: translateX(-20px) rotate(90deg);
+		}
+		60%{
+			transform: translateX(20px) rotate(135deg);
+		}
+		80%{
+			transform: translateX(-20px) rotate(180deg);
+		}
+		100%{
+			top: 110%;
+			transform: translateX(-20px) rotate(225deg);
+		}
+	}
+</style>
 
 
 
@@ -262,11 +376,7 @@
 
 
 
-
-
-
-
-<div id="about-section" class="wrapper">
+<div id="about-section" class="wrapper" >
 	<div id="about-section-container" class="container">
 			<div class="column four offset-seven"> 
 				<h3>About Sanskriti</h3>
@@ -296,13 +406,13 @@
 	<div id="main-events" class="wrapper">
 		<div id="main-events-container">
 				<div class="column four offset-seven"> 
-					<h3>Celebrating Culture</h3>
+					<h3 style="z-index: 2;">Celebrating Culture</h3>
 				</div>
 				<!-- data-aos-once="true" -->
 				<div id="main-events-images">
-					<div class="main-events-img1-container wow fadeInLeft" data-wow-duration="1.6s" data-wow-delay="0.2s"><img class="main-events-img1" src='{%static "home/img/sanskriti-img/dj-choreo.jpg"%}' alt=""></div>
-					<div class="main-events-img2-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.3s"><img class="main-events-img2" src='{%static "home/img/sanskriti-img/Takara.jpg"%}' alt=""></div>
-					<div class="main-events-img3-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.6s"><img class="main-events-img3" src='{%static "home/img/sanskriti-img/divaat.jpg"%}' alt=""></div>
+					<div style="z-index: 2;" class="main-events-img1-container wow fadeInLeft" data-wow-duration="1.6s" data-wow-delay="0.2s"><img class="main-events-img1" src='{%static "home/img/sanskriti-img/events3/dj-choreo.jpg"%}' alt=""></div>
+					<div style="z-index: 2;" class="main-events-img2-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.3s"><img class="main-events-img2" src='{%static "home/img/sanskriti-img/events3/Takara.jpg"%}' alt=""></div>
+					<div style="z-index: 2;" class="main-events-img3-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.6s"><img class="main-events-img3" src='{%static "home/img/sanskriti-img/events3/divaat.jpg"%}' alt=""></div>
 				</div>
 		</div><!-- #home-welcome-message-container -->	
 	</div><!-- #home-welcome-message -->
@@ -317,57 +427,57 @@
 
 
 			<div class="arangu-event flex flex-left" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img src='{%static "home/img/sanskriti-img/arangu.jpg"%}' alt="">
-				<h1>Arangu</h1>
-				<p>
+				<img  style="z-index: 2;" src='{%static "home/img/sanskriti-img/events3/arangu.jpg"%}' alt="">
+				<h1 style="z-index: 2;" >Arangu</h1>
+				<p style="z-index: 2;" >
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a href="#" class="btn-margin-left">All Events</a>
+				<a  style="z-index: 2;" href="#" class="btn-margin-left">All Events</a>
 			</div>
 
 
-			<div class="inter-event flex flex-right color-trans-effect" data-aos="fade-right" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img src='{%static "home/img/sanskriti-img/events2/divaat2.jpg"%}' alt="">
-				<h1>Inter</h1>
-				<p>
+			<div class="inter-event flex flex-right trans-effect" data-aos="fade-right" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/inter.jpg"%}' alt="">
+				<h1 style="z-index: 2;" >Inter</h1>
+				<p style="z-index: 2;" >
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a href="http://www.google.com" class="btn-margin-right">All Events</a>
+				<a  style="z-index: 2;" href="http://www.google.com" class="btn-margin-right">All Events</a>
 			</div>
 
 
-			<div class="alai-event flex flex-left color-trans-effect" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img src='{%static "home/img/sanskriti-img/events2/alai.jpg"%}' alt="">
-				<h1>Alai</h1>
-				<p>
+			<div class="alai-event flex flex-left trans-effect" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/alai.jpg"%}' alt="">
+				<h1 style="z-index: 2;" >Alai</h1>
+				<p style="z-index: 2;" >
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a href="http://www.google.com" class="btn-margin-left">All Events</a>
+				<a  style="z-index: 2;" href="http://www.google.com" class="btn-margin-left">All Events</a>
 			</div>
 
 
-			<div class="film-event flex flex-right color-trans-effect" data-aos="fade-right" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img src='{%static "home/img/sanskriti-img/events2/minukku.jpg"%}' alt="">
-				<h1>Film Festival</h1>
-				<p>
+			<div class="film-event flex flex-right trans-effect" data-aos="fade-right" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/minukku.jpg"%}' alt="">
+				<h1 style="z-index: 2;" >Film Festival</h1>
+				<p style="z-index: 2;" >
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a href="http://www.google.com" class="btn-margin-right">All Events</a>
+				<a  style="z-index: 2;" href="http://www.google.com" class="btn-margin-right">All Events</a>
 			</div>
 
 
-			<div class="jaalakam-event flex flex-left color-trans-effect" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img src='{%static "home/img/sanskriti-img/events2/jaalakam.jpg"%}' alt="">
-				<h1>Jaalakam</h1>
-				<p>
+			<div class="jaalakam-event flex flex-left trans-effect" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/jaalakam.jpg"%}' alt="">
+				<h1 style="z-index: 2;" >Jaalakam</h1>
+				<p style="z-index: 2;" >
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -382,16 +492,16 @@
 
 
 	
-	<div id="home-event-slider" class="wrapper">
+	<div id="home-event-slider" class="wrapper" style="z-index: 2;" >
 				<div class="music_thought_title container">
-					<h1 class="music"><a href="event-category/music/index.html"> Events</span></a></h1>
+					<h1 class="music"><a  style="z-index: 2;" href="event-category/music/index.html"> Events</span></a></h1>
 				</div> <!-- .music_thought_title -->
 		
-					<div class="event-slider">
-							<div class="event-slide music">
+					<div class="event-slider"  style="z-index: 2;" >
+							<div class="event-slide music" style="z-index: 2;" >
 								<a class="event-slide-thumb" href="lineup/flying-lotus/index.html">
-										<img width="500" height="400" src='{%static "home/img/sanskriti-img/events2/djnite.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-										<div class="event-name">
+										<img  style="z-index: 2;" width="500" height="400" src='{%static "home/img/sanskriti-img/events/djnite.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
+										<div  style="z-index: 2;" class="event-name">
 												<h2><span>Dj Nite</span></h2>
 										</div>
 									</div>
@@ -400,8 +510,8 @@
 
 							<div class="event-slide thought">
 								<a class="event-slide-thumb" href="lineup/beyond-human-creativity-machine/index.html">
-									<img src='{%static "home/img/sanskriti-img/events2/jaalakam.jpg"%}' />
-									<div class="event-details">
+									<img  style="z-index: 2;" src='{%static "home/img/sanskriti-img/events/jaalakam.jpg"%}' />
+									<div  style="z-index: 2;" class="event-details">
 										<div class="event-name">
 											<h2><span>Jaalakam</span></h2>
 										</div>
@@ -411,8 +521,8 @@
 							
 							<div class="event-slide music">
 								<a class="event-slide-thumb" href="lineup/tycho/index.html">
-										<img width="500" height="400" src='{%static "home/img/sanskriti-img/events2/choreoNite.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-										<div class="event-name">
+										<img  style="z-index: 2;" width="500" height="400" src='{%static "home/img/sanskriti-img/events/choreoNite.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
+										<div  style="z-index: 2;" class="event-name">
 												<h2><span>Dj Chore</span></h2>
 										</div>
 									</div>
@@ -420,9 +530,9 @@
 							</div>
 							<div class="event-slide thought">
 								<a class="event-slide-thumb" href="lineup/innovations-impact/index.html">
-									<img src='{%static "home/img/sanskriti-img/events2/divaat2.jpg"%}' />
+									<img style="z-index: 2;"  src='{%static "home/img/sanskriti-img/events/divaat2.jpg"%}' />
 									<div class="event-details">
-									<div class="event-name">
+									<div style="z-index: 2;"  class="event-name">
 											<h2><span>Divaat</span></h2>
 									</div>
 								</div>
@@ -430,8 +540,8 @@
 					</div>
 									<div class="event-slide music">
 							<a class="event-slide-thumb" href="lineup/deerhoof/index.html">
-																	<img width="500" height="400" src='{%static "home/img/sanskriti-img/events2/alai.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
+																	<img style="z-index: 2;"  width="500" height="400" src='{%static "home/img/sanskriti-img/events/alai.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
+									<div  style="z-index: 2;" class="event-name">
 											<h2><span>Alai</span></h2>
 									</div>
 								</div>
@@ -440,9 +550,9 @@
 									<div class="event-slide thought">
 							<a class="event-slide-thumb" href="lineup/technology-of-storytelling/index.html">
 									
-									<img src='{%static "home/img/sanskriti-img/events2/minukku.jpg"%}' />
+									<img  style="z-index: 2;" src='{%static "home/img/sanskriti-img/events/minukku.jpg"%}' />
 																<div class="event-details">
-									<div class="event-name">
+									<div  style="z-index: 2;" class="event-name">
 											<h2><span>Minukku</span></h2>
 									</div>
 								</div>
@@ -450,235 +560,14 @@
 					</div>
 									<div class="event-slide music">
 							<a class="event-slide-thumb" href="lineup/yacht/index.html">
-																	<img width="500" height="400" src='{%static "home/img/sanskriti-img/events2/choreoNite.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
-											<h2><span></span></h2>
+																	<img width="500" height="400" src='{%static "home/img/sanskriti-img/events/arangu.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
+									<div  style="z-index: 2;" class="event-name">
+											<h2 style="z-index: 2;" ><span>Mace Utsav</span></h2>
 									</div>
 								</div>
 							</a>
 					</div>
-									<!-- <div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/mark-hatch/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Boom! Welcome to the Maker Revolution.</span></h2>
-																					<h3><span>Talk</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide music">
-							<a class="event-slide-thumb" href="lineup/dan-deacon/index.html">
-																	<img width="500" height="400" src="wp-content/uploads/2016/05/dandeacon-500x400.jpg" class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Dan Deacon</span></h2>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/arts-ability-to-predict/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Art’s Ability to Predict the Future</span></h2>
-																					<h3><span>Conversation</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide music">
-							<a class="event-slide-thumb" href="lineup/suuns/index.html">
-																	<img width="500" height="400" src="wp-content/uploads/2016/05/suuns-500x400.jpg" class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Suuns</span></h2>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/robots-for-the-rest-of-us/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Robots for the Rest of Us</span></h2>
-																					<h3><span>Talk</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide music">
-							<a class="event-slide-thumb" href="lineup/prince-rama/index.html">
-																	<img width="500" height="400" src="wp-content/uploads/2016/05/princerama-500x400.jpg" class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Prince Rama</span></h2>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/multi-disciplinary-performance/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Multi-Disciplinary Performance in a Multi-Media World</span></h2>
-																					<h3><span>Conversation</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide music">
-							<a class="event-slide-thumb" href="lineup/sky-pony/index.html">
-																	<img width="500" height="400" src="wp-content/uploads/2016/05/skypony2-500x400.jpg" class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Sky-Pony</span></h2>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/social-enterprise-profit-prosperity-lasting-impact/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Social Enterprise: Profit, Prosperity and Lasting Impact</span></h2>
-																					<h3><span>Panel</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide music">
-							<a class="event-slide-thumb" href="lineup/ice/index.html">
-																	<img width="500" height="400" src="wp-content/uploads/2016/05/ice-500x400.jpg" class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
-											<h2><span>ICE</span></h2>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/big-data-predictive-analytics/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Big Data &#8211; Predictive Analytics</span></h2>
-																					<h3><span>Panel</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide music">
-							<a class="event-slide-thumb" href="lineup/yowie/index.html">
-																	<img width="500" height="400" src="wp-content/uploads/2016/05/yowie-500x400.jpg" class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Yowie</span></h2>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/digital-changing-meaning-reality/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>How Digital is Changing the Meaning of Reality</span></h2>
-																					<h3><span>Conversation</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/routes-roots/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>The Routes &#038; Roots Contributing to Oppression</span></h2>
-																					<h3><span>Talk</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/whats-really-happening-on-earth/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>What’s Really Happening on Earth, and What Should We Do About It?</span></h2>
-																					<h3><span>Talk</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/tuning-infrastructure/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Tuning Infrastructure</span></h2>
-																					<h3><span>Talk</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/data-trends-activism/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Data, Trends &#038; Activism: Incremental Steps Toward Systemic Change</span></h2>
-																					<h3><span>Panel</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/social-vulnerability-civic-innovation/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Social Vulnerability &#038; Civic Innovation</span></h2>
-																					<h3><span>Talk</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/seduction-automation-cia-social-medigers/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>The Seduction of Automation, from the CIA to Social Media, and its Dangers</span></h2>
-																					<h3><span>Conversation</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div>
-									<div class="event-slide thought">
-							<a class="event-slide-thumb" href="lineup/prototyping-equity/index.html">
-									
-									<img src="wp-content/themes/murmuration/images/trans-bg-500x400.png" />
-																<div class="event-details">
-									<div class="event-name">
-											<h2><span>Prototyping Equity</span></h2>
-																					<h3><span>Conversation</span></h3>
-																			</div>
-								</div>
-							</a>
-					</div> -->
+					
 							</div><!-- .event-slider -->
 			<div class="home-event-cta container">
 				<a class="button red-button" href="event-category/music/index.html">Arangu Events</a>
@@ -894,7 +783,7 @@
 <script type='text/javascript' src='{% static "home/vendor/gravityforms/js/jquery.json.min.js"%}'></script>
 <script type='text/javascript' src='{% static "home/vendor/gravityforms/js/gravityforms.min.js"%}'></script>
 <script type='text/javascript' src='{% static "home/vendor/gravityforms/js/placeholders.jquery.min.js"%}'></script>
-<script src='{% static "home/js/script8.js"%}'></script>
+<script src='{% static "home/js/script.js"%}'></script>
 
 </body>
 
