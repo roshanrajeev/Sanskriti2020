@@ -117,7 +117,7 @@
 <nav id="modal-navigation" role="navigation">	
 
 		<div id="modal-nav-header">
-			<a id="modal-nav-logo" href="index.html">
+			<a id="modal-nav-logo" href="{% url 'home' %}">
 				<img src='{% static "home/img/logo/butterfly-logo.png" %}' alt="" width="100px">
 			</a>
 			<a id="nav-close" class="close" href="javascript:;">
@@ -132,13 +132,13 @@
 	<div id="primary-navigation">
 		<div class="menu-main-navigation-container">
 			<ul id="menu-main-navigation" class="menu">
-				<li id="menu-item-601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-601"><a href="#">Events</a></li>
+				<li id="menu-item-601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-601"><a href="{% url 'EventView' %}">Events</a></li>
 				<li id="menu-item-1261" class="menu-item menu-item-type-post_type_archive menu-item-object-events menu-item-has-children menu-item-1261"><a href="lineup/index.html">About</a></li>
-				<li id="menu-item-1781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781"><a href="schedule/index.html">Arangu</a></li>
-				<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="events/index.html">Inter</a></li>
-				<li id="menu-item-1930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1930"><a href="tickets/index.html">Memolane</a></li>
-				<li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a href="sponsors/index.html">SPONSORS</a></li>
-			</ul>
+				<li id="menu-item-1781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781"><a href="{% url 'arangu' %}">Arangu</a></li>
+				<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="{% url 'inter' %}">Inter</a></li>
+				<!--<li id="menu-item-1930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1930"><a href="{% url 'arangu' %}">Memolane</a></li>
+				<li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a href="sponsors/index.html">SPONSORS</a></li>-->
+			</ul> 
 		</div>	
 	</div>
 	<div id="modal-search">
@@ -156,10 +156,11 @@
 	
 	<div id="modal-social">
 		
+		<!-- SOCIAL MEDIA LINKS -->
 	<ul class="social-nav">
 							<li><a href="https://twitter.com/MurmurationFest" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="https://www.facebook.com/MurmurationFest/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="https://instagram.com/murmurationfest/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://www.facebook.com/sanskritimace/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/sanskriti.mace/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="mailto:info@murmurationfest.com"><i class="fa fa-envelope"></i></a></li>
 				
 	</ul>
@@ -434,7 +435,7 @@
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a  style="z-index: 2;" href="#" class="btn-margin-left">All Events</a>
+				<a  style="z-index: 2;" href="{% url 'EventView' %}" class="btn-margin-left">All Events</a>
 			</div>
 
 
@@ -446,7 +447,7 @@
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a  style="z-index: 2;" href="http://www.google.com" class="btn-margin-right">All Events</a>
+				<a  style="z-index: 2;" href="{% url 'EventView' %}" class="btn-margin-right">All Events</a>
 			</div>
 
 
@@ -458,7 +459,7 @@
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a  style="z-index: 2;" href="http://www.google.com" class="btn-margin-left">All Events</a>
+				<a  style="z-index: 2;" href="#" class="btn-margin-left">Read More</a>
 			</div>
 
 
@@ -470,7 +471,7 @@
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a  style="z-index: 2;" href="http://www.google.com" class="btn-margin-right">All Events</a>
+				<a  style="z-index: 2;" href="#" class="btn-margin-right">Read More</a>
 			</div>
 
 
@@ -482,6 +483,7 @@
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
+				<a  style="z-index: 2;" href="#" class="btn-margin-right">Read More</a>
 			</div>
 
 			
@@ -570,8 +572,8 @@
 					
 							</div><!-- .event-slider -->
 			<div class="home-event-cta container">
-				<a class="button red-button" href="event-category/music/index.html">Arangu Events</a>
-				<a class="button yellow-button" href="event-category/thought/index.html">Inter Events</a>
+				<a class="button red-button" href="{% url 'arangu' %}">Arangu Events</a>
+				<a class="button yellow-button" href="{% url 'inter' %}">Inter Events</a>
 			</div>  <!-- .home-event-cta -->
 			</div> <!-- #home-event-slider -->
 	
