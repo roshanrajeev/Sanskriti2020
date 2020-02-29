@@ -16,7 +16,3 @@ Running the server locally
 ```
 python manage.py runserver
 ```
-comments
-------------------------------
-when creating the first item upload an image for thumbnail
-Then copy the image "sans20" into the media folder
