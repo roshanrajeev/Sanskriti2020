@@ -156,7 +156,6 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 	</script>
 
 
-
 	<link rel="stylesheet" href="{% static 'inter/css/style8.css'%}">
 </head>
 
@@ -190,10 +189,10 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 								<img src="{% static 'inter/img/logo-butterfly.png'%}" alt="" class="logo-partial">
 								<h1>Inter</h1>
 								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Inter</a></li>
-									<li><a href="#">Arangu</a></li>
-									<li><a href="#">Filmfest</a></li>
+									<li><a href="{% url 'home'%}">Home</a></li>
+									<li><a href="{% url 'inter' %}">Inter</a></li>
+									<li><a href="{% url 'arangu' %}">Arangu</a></li>
+									<li><a href="{% url 'filmfest' %}">Filmfest</a></li>
 								</ul>
 							</header>
 
