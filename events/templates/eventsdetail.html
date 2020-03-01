@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="http://murmurationfest.com/xmlrpc.php">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+
 
   <!-- Favicons
 ================================================== -->
@@ -91,7 +93,7 @@
       src="https://www.facebook.com/tr?id=1783206141914159&ev=PageView&noscript=1" /></noscript>
   <!-- End Facebook Pixel Code -->
 
-  <title>Tycho - Murmuration Festival</title>
+  <title>{{ events.name }} - Sanskriti20</title>
 
   <!-- This site is optimized with the Yoast SEO plugin v5.2 - https://yoast.com/wordpress/plugins/seo/ -->
   <link rel="canonical" href="http://murmurationfest.com/lineup/tycho/" />
@@ -128,36 +130,36 @@
     }
   </style>
   <link rel='stylesheet' id='wp-block-library-css'
-    href='http://murmurationfest.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css'
+    href='{% static "\details\ccs\style.min.css" %}' type='text/css'
     media='all' />
   <link rel='stylesheet' id='thunder-bolt-style-css' href="{% static 'details/css/style.css' %}" type='text/css'
     media='all' />
   <link rel='stylesheet' id='font-awesome-css'
-    href='http://murmurationfest.com/wp-content/themes/murmuration/font-awesome/css/font-awesome.min.css?ver=1'
+    href='{% static "\details\css\font-awesome.min.css" %}'
     type='text/css' media='all' />
-  <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js?ver=2.1.1'></script>
+  <script type='text/javascript' src='{% static "\details\js\jquery.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/modernizr.js?ver=1'></script>
+    src='{% static "\details\js\modernizr.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/cookie.js?ver=1'></script>
+    src='{% static "\details\js\cookie.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/popup.js?ver=1'></script>
+    src='{% static "\details\js\popup.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/slick.js?ver=1'></script>
+    src='{% static "\details\js\slick.js" %}'></script>
   <script type='text/javascript'
-    src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js?ver=1'></script>
+    src='{% static "\details\js\TweenLite.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js?ver=1'></script>
+    src='{% static "\details\js\CSSPlugin.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js?ver=1'></script>
+    src='{% static "\details\js\EasePack.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/tweens.js?ver=1'></script>
+    src='{% static "\details\js\tweens.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/skrollr.min.js?ver=1'></script>
+    src='{% static "\details\js\skrollr.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/skrollr.inits.js?ver=1'></script>
+    src='{% static "\details\js\skrollr.inits.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/inits.js?ver=1'></script>
+    src='{% static "\details\js\inits.js" %}'></script>
   <link rel='https://api.w.org/' href='http://murmurationfest.com/wp-json/' />
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://murmurationfest.com/xmlrpc.php?rsd" />
   <link rel="wlwmanifest" type="application/wlwmanifest+xml"
@@ -195,16 +197,16 @@
     <div id="template-wrapper" class="wrapper">
       <div id="template" class="site-content">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
-        <script src="http://murmurationfest.com/wp-content/themes/murmuration/js/plangular.min.js"></script>
+        <script src='{% static "\details\js\angular.min.js" %}'></script>
+        <script src='{% static "\details\js\plangular.min.js" %}'></script>
 
         <article id="post-1124"
           class="event-category-music post-1124 events type-events status-publish has-post-thumbnail hentry">
 
 
           <div id="header">
-            <img src="{% static 'arangu/img/logo.png'%}" alt="" class="logo-complete">
-            <img src="{% static 'arangu/img/logo-butterfly.png'%}" alt="" class="logo-partial">
+            <a href='{% url "home" %}'><img src="{% static 'inter/img/logo.png'%}" alt="" class="logo-complete"></a>
+								<a href='{% url "home" %}'><img src="{% static 'inter/img/logo-butterfly.png'%}" alt="" class="logo-partial"></a>
             <h1>Arangu</h1>
             <ul>
               <li><a href="{% url 'home' %}">Home</a></li>
@@ -217,16 +219,19 @@
           <header id="event_header_wrapper" class="single-header-event header-content wrapper">
             <div class="header-container container">
               <div class="header_img">
-                <img src="http://murmurationfest.com/wp-content/uploads/2016/05/tycho2.jpg" class="tilt-effect"
+                <!--########################   CONTENT IAMGE Should Keep image placeholder here   ############################-->
+                <img src={{ events.img.url }} class="tilt-effect"
                   data-tilt-options='{ "extraImgs" : 4, "opacity" : 0.5, "movement": { "perspective" : 500, "translateX" : -15, "translateY" : -15, "translateZ" : 20, "rotateX" : 15, "rotateY" : 15 } }'
                   alt="grid01" />
                 <div class="single-event-title">
-                  <h2><span>Tycho</span></h2>
+                  <!-- Event name Place holder -->
+                  <h2><span>{{ events.name }}</span></h2>
                 </div>
 
 
                 <div id="register">
-                  <a href="/tickets/" class="button arrow-button">Register</a>
+                  <!-- Registration link place holder -->
+                  <a href={{ events.url }} class="button arrow-button">Register</a>
                 </div><!-- .header-cta -->
 
 
@@ -236,7 +241,7 @@
           </header> <!-- .single-header -->
 
 
-          <script src="http://murmurationfest.com/wp-content/themes/murmuration/js/tiltfx.js"></script>
+          <script src='{% static "\details\js\tiltfx.js" %}'></script>
 
 
           <div class="event-content-wrapper wrapper" ng-app="app">
@@ -245,18 +250,18 @@
               <div id="detail-single-event" class="content-area column three">
 
                 <div class="stage-time">
-                  <div class="event-stage"><i class="fas fa-rupee-sign"></i>REG FEE : 500</div>
-                  <div class="event-time-day">Mon 09.26</div>
-                  <div class="event-time-hour">1:30 AM - 3:00 AM</div>
+                  <div class="event-stage"><i class="fas fa-rupee-sign"></i>REG FEE : {{ events.fees }}</div>
+                  <div class="event-time-day">DATE: {{ events.date }}</div>
+                  <div class="event-time-hour">TIME: {{ events.time }}</div>
                 </div>
 
 
                 <a class="popup-video event-video-popup" href="">
-                  <img src="{% static 'details/img/download.png' %}" alt="tychovid" />
+                  <img src="{% static 'details/img/download.png' %}" alt={{ events.name }} />
                 </a>
 
 
-
+                <!-- ###################################### Social Links ######################################-->
                 <ul class="social-nav">
                   <li><a href="https://twitter.com/iso50" target="_blank"><i class="fa fa-twitter"></i></a></li>
                   <li><a href="https://www.facebook.com/tychomusic" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -275,41 +280,7 @@
 
 
                 <div class="single-content">
-                  <p>For nearly a decade, Tycho has been known as the musical alias of Scott Hansen, but with the
-                    release of Awake – his second LP for Ghostly International – the solo project has evolved into a
-                    three-piece band. Reaching an entire new realm of sonic possibilities this time out, Awake is
-                    situated in the present, reaching Hansen’s vision of Tycho like never before. “This is, in many
-                    ways, the first true Tycho record.”</p>
-                  <p>Following 2011’s Dive LP, the San Francisco, California based designer toured extensively,
-                    accompanied by a full band on stage, his sound coalesced into a percussive, organic whole. Zac Brown
-                    (guitars, bass) continued to join Scott on the road, but it was the particular addition of Rory
-                    O’Connor’s live drumming that ultimately sent Hansen back to the studio with a more precise vision
-                    for what the future of what Tycho could be. “After the tour, I decided that I wanted to capture the
-                    more energetic, driven sound of the live show on the next album,” Hansen recalls. Bringing musicians
-                    into Tycho’s creative process was a step towards expanding his own songwriting and advancing the
-                    project beyond its current incarnation.</p>
-                  <p>In a cabin near Lake Tahoe last winter, Hansen and Brown began fleshing out the structure of the
-                    new record, but it wasn’t until they set up shop in the hills of Santa Cruz with O’Connor that it
-                    all fell into place. “It crystallized the vision of how the drums would come to the forefront on
-                    this record,” says Hansen. The sound was much more stripped-down and concise with live instruments
-                    coming to the forefront. Perhaps it was leading up to this all along, songs like “Montana” and
-                    “Awake” perfectly exemplify Tycho’s new, amped up, sound – unique to the group effort poured into
-                    the songs on the new record – while “See” and “Dye” echo ideas from previous works but with a clear
-                    with a view to the future. Working with Count Eldridge, who also engineered Dive, the team could
-                    fixate on the pulses that Tycho might have previously layered under synthesizers and exhume them
-                    with distinct bass and guitar patterns. Together they bridge an ethereal middle ground between old
-                    memories and new experiences, “While I grew up in California, I spent a lot of time as a kid in
-                    places like Colorado, Wyoming, New Mexico and Montana,” says Hansen, ”I got back in touch with those
-                    areas over the past few years and they inspired me a great deal.” Hansen went on to build those
-                    images into the foundation behind the artwork for Awake, “I created the cover art to be a symbol, or
-                    a flag, to represent this fictional region comprised of idealized elements of all these western
-                    states.”</p>
-                  <p>Also known for his design work as ISO50, Hansen’s visual and sonic efforts have dovetailed
-                    throughout the course of his career. “This is the first time in my life I’ve dropped everything to
-                    focus on one artistic pursuit,” notes Hansen. Previous Tycho releases came to fruition from Hansen’s
-                    delicate solo approach to constructing a song, tweaking each peak and valley, but ‘Awake’ is three
-                    like-minded people coming together where music becomes the sole purpose and true expression becomes
-                    the result.</p>
+                  <p>{{ events.description }}</p>
                 </div><!-- .entry-content -->
 
 
@@ -418,29 +389,29 @@
   </script>
 
   <link rel='stylesheet' id='gforms_reset_css-css'
-    href='http://murmurationfest.com/wp-content/plugins/gravityforms/css/formreset.min.css?ver=2.2.4.1' type='text/css'
+    href='{% static "\details\css\formreset.min.css" %}' type='text/css'
     media='all' />
   <link rel='stylesheet' id='gforms_formsmain_css-css'
-    href='http://murmurationfest.com/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.2.4.1' type='text/css'
+    href='{% static "\details\css\formsmain.min.css" %}' type='text/css'
     media='all' />
   <link rel='stylesheet' id='gforms_ready_class_css-css'
-    href='http://murmurationfest.com/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.2.4.1' type='text/css'
+    href='{% static "\details\css\readyclass.min.css" %}' type='text/css'
     media='all' />
   <link rel='stylesheet' id='gforms_browsers_css-css'
-    href='http://murmurationfest.com/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.2.4.1' type='text/css'
+    href='{% static "\details\css\browsers.min.css" %}' type='text/css'
     media='all' />
   <link rel='stylesheet' id='gravityformsmailchimp_form_settings-css'
-    href='http://murmurationfest.com/wp-content/plugins/gravityformsmailchimp/css/form_settings.css?ver=4.2'
+    href='{% static "\details\css\form_settings.css" %}'
     type='text/css' media='all' />
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/themes/murmuration/js/skip-link-focus-fix.js?ver=20130115'></script>
-  <script type='text/javascript' src='http://murmurationfest.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+    src='{% static "\details\js\skip-link-focus-fix.js" %}'></script>
+  <script type='text/javascript' src='{% static "\details\js\wp-embed.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.2.4.1'></script>
+    src='{% static "\details\js\jquery.json.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.2.4.1'></script>
+    src='{% static "\details\js\gravityforms.min.js" %}'></script>
   <script type='text/javascript'
-    src='http://murmurationfest.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.2.4.1'></script>
+    src='{% static "\details\js\placeholders.jquery.min.js" %}'></script>
 
 </body>
 

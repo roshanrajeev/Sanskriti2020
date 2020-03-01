@@ -8,9 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="http://murmurationfest.com/xmlrpc.php">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
 
 	<!-- Favicons
 ================================================== -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="http://murmurationfest.com/wp-content/themes/murmuration/images/favicon.ico">
 	<link rel="apple-touch-icon"
 		href="http://murmurationfest.com/wp-content/themes/murmuration/images/apple-touch-icon.png">
@@ -94,7 +96,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 			src="https://www.facebook.com/tr?id=1783206141914159&ev=PageView&noscript=1" /></noscript>
 	<!-- End Facebook Pixel Code -->
 
-	<title>Music Archives - Murmuration Festival</title>
+	<title>Inter Events - Sanskriti20</title>
 
 	<!-- This site is optimized with the Yoast SEO plugin v5.2 - https://yoast.com/wordpress/plugins/seo/ -->
 	<link rel="canonical" href="http://murmurationfest.com/event-category/music/" />
@@ -155,7 +157,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 		window._se_plugin_version = '8.1.9';
 	</script>
 
-
+	
 	<link rel="stylesheet" href="{% static 'inter/css/style8.css'%}">
 </head>
 
@@ -185,11 +187,11 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 						<div id="content-archive" class="content-area">
 
 							<header id="header">
-								<img src="{% static 'inter/img/logo.png'%}" alt="" class="logo-complete">
-								<img src="{% static 'inter/img/logo-butterfly.png'%}" alt="" class="logo-partial">
-								<h1>Inter</h1>
+								<a href='{% url "home" %}'><img src="{% static 'inter/img/logo.png'%}" alt="" class="logo-complete"></a>
+								<a href='{% url "home" %}'><img src="{% static 'inter/img/logo-butterfly.png'%}" alt="" class="logo-partial"></a>
+								<h1>Arangu</h1>
 								<ul>
-									<li><a href="{% url 'home'%}">Home</a></li>
+									<li><a href="{% url 'home' %}">Home</a></li>
 									<li><a href="{% url 'inter' %}">Inter</a></li>
 									<li><a href="{% url 'arangu' %}">Arangu</a></li>
 									<li><a href="{% url 'filmfest' %}">Filmfest</a></li>
