@@ -207,11 +207,13 @@
           <div id="header">
             <a href='{% url "home" %}'><img src="{% static 'inter/img/logo.png'%}" alt="" class="logo-complete"></a>
 								<a href='{% url "home" %}'><img src="{% static 'inter/img/logo-butterfly.png'%}" alt="" class="logo-partial"></a>
-            <h1>Arangu</h1>
+                
+                <h1>Arangu</h1>
             <ul>
               <li><a href="{% url 'inter' %}">Inter Events</a></li>
               <li><a href="{% url 'arangu' %}">Arangu Events</a></li>
             </ul>
+            
           </div>
 
           <header id="event_header_wrapper" class="single-header-event header-content wrapper">
@@ -267,7 +269,8 @@
 
 
                 <div class="single-content">
-                  <p>{{ events.description }}</p>
+                  <p>{{ events.description|linebreaks }}</p>
+                  <p>{{ events.rules|linebreaks }} </p>
                 </div><!-- .entry-content -->
 
 
