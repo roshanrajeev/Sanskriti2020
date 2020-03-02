@@ -20,17 +20,17 @@ class Event(models.Model):
     name = models.CharField(max_length=200)
     event_type = models.CharField(max_length=10,choices=event_choice,blank=True)
     sg = models.CharField(max_length=10,choices=team_choice,blank=True,verbose_name="Single/Group")
-    duration = models.CharField(max_length=50,default='5 min')
-    nop = models.IntegerField(default=1,verbose_name='Number of Participants', blank=False)
-    slug = models.SlugField(max_length=200, null=True)
-    #slug=slugify(name)
-    brief = models.CharField(max_length=400,blank=True)
+    duration = models.CharField(max_length=50,blank=True, default='5mins')
+    nop = models.IntegerField(default=1,verbose_name='Number of Participants', blank=True)
+    slug = models.SlugField(max_length=200, blank=False, unique=True,default='slug')
+    brief = models.CharField(max_length=400, blank=True)
     description = models.TextField()
+    rules = models.TextField(blank=True)
     contact = models.CharField(max_length=30,blank=True)
     date = models.CharField(max_length=50,blank=True)
     time = models.CharField(max_length=50,blank=True)
     venue = models.CharField(max_length=250,blank=True)
-    url = models.URLField(default='url',verbose_name="Registration Link")
+    url = models.URLField(default='url',verbose_name="Registration Link", blank=True)
     fees = models.IntegerField()
     prize = models.CharField(max_length=200)
     img = ProcessedImageField(upload_to="post_images",verbose_name='Image',blank=False)
@@ -38,18 +38,18 @@ class Event(models.Model):
     minreg = models.IntegerField(verbose_name='Minimum Registrations',default=15)
     
     #Meta
-    created_on = models.DateTimeField(auto_now_add=True, null=True)
-    updated_on = models.DateTimeField(null=True, auto_now_add=True)
+    #created_on = models.DateTimeField(auto_now_add=True, null=True)
+    #updated_on = models.DateTimeField(null=True, auto_now_add=True)
 
     def __str__(self):
     	return self.name
+#
+   # def get_absolute_url(self):
+  #      url = reverse('detailview', kwargs={'slug': self.slug})
+   #     return url
 
-    def get_absolute_url(self):
-        url = reverse('detailview', kwargs={'slug': self.slug})
-        return url
-
-    def getname(self):
-        return self.name
+   # def getname(self):
+   #     return self.name
 
 
 

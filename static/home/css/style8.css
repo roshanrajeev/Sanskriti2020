@@ -470,7 +470,7 @@
 }
 
 #other-main-events div:not(:nth-child(1)){
-    margin-top: -110px;
+    margin-top: -160px;
 }
 
 .flex{
