@@ -1035,17 +1035,17 @@ TABLE OF CONTENTS:
 .scrolling-bg { bottom: 0; left: 0; position: fixed; right: 0; top: 0; }
 
 /* line 42, sass/_content.scss */
-#bg-fore { background-image: url("images/default-murm-bg-fore.png"); opacity: 0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50); }
+#bg-fore { background-image: url("../img/sanskriti-img/default-murm-bg-fore.png"); opacity: 0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50); }
 @media (max-width: 767px) { /* line 42, sass/_content.scss */
   #bg-fore { background-size: auto; opacity: 0.25; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)"; filter: alpha(opacity=25); } }
 
 /* line 43, sass/_content.scss */
-#bg-mid { background-image: url("images/default-murm-bg-mid.png"); opacity: 0.75; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; filter: alpha(opacity=75); }
+#bg-mid { background-image: url("../img/sanskriti-img/default-murm-bg-mid.png"); opacity: 0.75; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; filter: alpha(opacity=75); }
 @media (max-width: 767px) { /* line 43, sass/_content.scss */
   #bg-mid { display: none; } }
 
 /* line 44, sass/_content.scss */
-#bg-back { background-image: url("images/default-murm-bg-back.png"); opacity: 0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50); }
+#bg-back { background-image: url("../img/sanskriti-img/default-murm-bg-back.png"); opacity: 0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50); }
 @media (max-width: 767px) { /* line 44, sass/_content.scss */
   #bg-back { display: none; } }
 
