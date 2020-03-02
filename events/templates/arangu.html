@@ -198,36 +198,40 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 								</ul>
 							</header>
 
+							{% for event in events %}
+							
+									<article id= {{ event.id }}
+										class="event-index-card post-1120 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
-							<article id="post-1120"
-								class="event-index-card post-1120 events type-events status-publish has-post-thumbnail hentry event-category-music">
+										<a class="index-thumb-feature" href="{% url 'detailview' event.slug %}">
+											<img width="500" height="600"
+												src={{ event.img.url }}
+												class="attachment-event_index size-event_index wp-post-image" alt="" /> <span
+												class="view-bio">View Bio</span>
+											<div class="event-details">
+												<!--<div class="event-name">
+													<h2><span>{{ event.name }}</span></h2>
+												</div>
 
-								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/flying-lotus/">
-									<img width="500" height="600"
-										src='{% static "/arangu/img/flyinglotus-500x600.jpg" %}'
-										class="attachment-event_index size-event_index wp-post-image" alt="" /> <span
-										class="view-bio">View Bio</span>
-									<div class="event-details">
-										<div class="event-name">
-											<h2><span>Flying Lotus</span></h2>
-										</div>
-
-										<div class="stage-time">
-											<span class="event-stage"><i class="fa fa-map-marker"
-													aria-hidden="true"></i> EI Sound Stage</span>
-											&nbsp;
-											<span class="event-time">Sun 09.25, 1:30 AM - 3:00 AM</span>
-										</div>
-
-
-									</div>
-								</a>
-
-							</article><!-- #post-## -->
+												<div class="stage-time">
+													<span class="event-stage"><i class="fa fa-map-marker"
+															aria-hidden="true"></i>{{ event.venue }}</span>
+													&nbsp;
+													<span class="event-time"> {{ event.date }}, {{ event.time}} </span>
+												</div>-->
 
 
+											</div>
+										</a>
 
-							<article id="post-1124"
+									</article><!-- #post-## -->
+								
+							{% endfor %}
+							
+
+
+
+							<!--<article id="post-1124"
 								class="event-index-card post-1124 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/tycho/">
@@ -254,7 +258,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-1143"
+							<!--<article id="post-1143"
 								class="event-index-card post-1143 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/deerhoof/">
@@ -281,7 +285,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-435"
+							<!--<article id="post-435"
 								class="event-index-card post-435 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/yacht/">
@@ -308,7 +312,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-1095"
+							<!--<article id="post-1095"
 								class="event-index-card post-1095 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/dan-deacon/">
@@ -335,7 +339,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-1091"
+							<!--<article id="post-1091"
 								class="event-index-card post-1091 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/suuns/">
@@ -362,7 +366,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-1113"
+							<!--<article id="post-1113"
 								class="event-index-card post-1113 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/prince-rama/">
@@ -389,7 +393,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-1106"
+							<!--<article id="post-1106"
 								class="event-index-card post-1106 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/sky-pony/">
@@ -416,7 +420,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-1150"
+							<!--<article id="post-1150"
 								class="event-index-card post-1150 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/ice/">
@@ -443,7 +447,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 
-							<article id="post-1101"
+							<!--<article id="post-1101"
 								class="event-index-card post-1101 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
 								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/yowie/">

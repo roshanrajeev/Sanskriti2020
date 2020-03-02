@@ -189,7 +189,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 							<header id="header">
 								<a href='{% url "home" %}'><img src="{% static 'inter/img/logo.png'%}" alt="" class="logo-complete"></a>
 								<a href='{% url "home" %}'><img src="{% static 'inter/img/logo-butterfly.png'%}" alt="" class="logo-partial"></a>
-								<h1>Arangu</h1>
+								<h1>Inter Events</h1>
 								<ul>
 									<li><a href="{% url 'home' %}">Home</a></li>
 									<li><a href="{% url 'inter' %}">Inter</a></li>
@@ -197,26 +197,26 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 									<li><a href="{% url 'filmfest' %}">Filmfest</a></li>
 								</ul>
 							</header>
-
-
-							<article id="post-1120"
+							{% for event in events %}
+							
+							<article id= {{ event.id }}
 								class="event-index-card post-1120 events type-events status-publish has-post-thumbnail hentry event-category-music">
 
-								<a class="index-thumb-feature" href="http://murmurationfest.com/lineup/flying-lotus/">
+								<a class="index-thumb-feature" href="{% url 'detailview' event.slug %}">
 									<img width="500" height="600"
-										src='{% static "/inter/img/flyinglotus-500x600.jpg" %}'
+										src={{ event.img.url }}
 										class="attachment-event_index size-event_index wp-post-image" alt="" /> <span
 										class="view-bio">View Bio</span>
 									<div class="event-details">
 										<div class="event-name">
-											<h2><span>Flying Lotus</span></h2>
+											<h2><span>{{ event.name }}</span></h2>
 										</div>
 
 										<div class="stage-time">
 											<span class="event-stage"><i class="fa fa-map-marker"
-													aria-hidden="true"></i> EI Sound Stage</span>
+													aria-hidden="true"></i>{{ event.venue }}</span>
 											&nbsp;
-											<span class="event-time">Sun 09.25, 1:30 AM - 3:00 AM</span>
+											<span class="event-time"> {{ event.date }}, {{ event.time}} </span>
 										</div>
 
 
@@ -224,6 +224,8 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 								</a>
 
 							</article><!-- #post-## -->
+						
+					{% endfor %}
 
 
 
