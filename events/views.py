@@ -22,10 +22,12 @@ def home(request):
 	return render(request,'home/index.html')
 
 def aranguview(request):
-	return render(request,'arangu.html')
+	events = Event.objects.filter(event_type='Arangu')
+	return render(request,'arangu.html', {'events':events})
 
 def interview(request):
-	return render(request, 'inter.html')
+	events = Event.objects.filter(event_type='Inter')
+	return render(request,'inter.html', {'events':events})
 
 def filmfestview(request):
 	return render(request, 'filmfest.html')
