@@ -134,9 +134,9 @@
     media='all' />
   <link rel='stylesheet' id='thunder-bolt-style-css' href="{% static 'details/css/style.css' %}" type='text/css'
     media='all' />
-  <link rel='stylesheet' id='font-awesome-css'
-    href='{% static "\details\css\font-awesome.min.css" %}'
+  <link rel='stylesheet' id='font-awesome-css' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
     type='text/css' media='all' />
+    
   <script type='text/javascript' src='{% static "\details\js\jquery.min.js" %}'></script>
   <script type='text/javascript'
     src='{% static "\details\js\modernizr.js" %}'></script>
@@ -209,10 +209,8 @@
 								<a href='{% url "home" %}'><img src="{% static 'inter/img/logo-butterfly.png'%}" alt="" class="logo-partial"></a>
             <h1>Arangu</h1>
             <ul>
-              <li><a href="{% url 'home' %}">Home</a></li>
-              <li><a href="{% url 'inter' %}">Inter</a></li>
-              <li><a href="{% url 'arangu' %}">Arangu</a></li>
-              <li><a href="{% url 'filmfest' %}">Filmfest</a></li>
+              <li><a href="{% url 'inter' %}">Inter Events</a></li>
+              <li><a href="{% url 'arangu' %}">Arangu Events</a></li>
             </ul>
           </div>
 
@@ -250,33 +248,22 @@
               <div id="detail-single-event" class="content-area column three">
 
                 <div class="stage-time">
-                  <div class="event-stage"><i class="fas fa-rupee-sign"></i>REG FEE : {{ events.fees }}</div>
+                  <div class="event-time-day"><i class="fa fa-calendar"></i> {{ events.date }}</div>
+
+                  <div class="event-stage"><i class="fa fa-inr"></i> Reg. Fee : {{ events.fees }}</div>
                   <div class="event-time-day">DATE: {{ events.date }}</div>
                   <div class="event-time-hour">TIME: {{ events.time }}</div>
                 </div>
 
 
-                <a class="popup-video event-video-popup" href="">
-                  <img src="{% static 'details/img/download.png' %}" alt={{ events.name }} />
-                </a>
+                <a class="popup-video event-video-popup" id="qrcode" style="padding:10px;"></a>
 
-
-                <!-- ###################################### Social Links ######################################-->
-                <ul class="social-nav">
-                  <li><a href="https://twitter.com/iso50" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="https://www.facebook.com/tychomusic" target="_blank"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li><a href="https://www.youtube.com/channel/UCWzGCSf-1fluXYvVOuh-aVA" target="_blank"><i
-                        class="fa fa-youtube-play"></i></a></li>
-                  <li><a href="http://tychomusic.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
-
-                </ul>
               </div>
 
 
               <div id="content-single-event" class="content-area column ten">
 
-                <h3 class="bio-title">Bio</h3>
+                <h3 class="bio-title">Description</h3>
 
 
                 <div class="single-content">
@@ -413,6 +400,18 @@
   <script type='text/javascript'
     src='{% static "\details\js\placeholders.jquery.min.js" %}'></script>
 
+    
+  <script src='{% static "\js\qrcode.min.js" %}'></script>    
+
+  <script type="text/javascript">
+      var qrcode = new QRCode("qrcode", {
+          text: window.location.href,
+          width: 160,
+          height: 160,
+          correctLevel : QRCode.CorrectLevel.H
+      });
+  </script>
+    
 </body>
 
 </html>
