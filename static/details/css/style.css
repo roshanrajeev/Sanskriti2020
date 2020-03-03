@@ -534,7 +534,7 @@ TABLE OF CONTENTS:
 /* line 68, sass/_header.scss */
 #header-wrapper #masthead { max-width: 100%; width: 90%; }
 @media (max-width: 767px) { /* line 68, sass/_header.scss */
-  #header-wrapper #masthead { background: #1e1f33; height: 60px; max-width: 100%; width: 100%; } }
+  #header-wrapper #masthead { background: transparent; height: 60px; max-width: 100%; width: 100%; } }
 @media (max-width: 767px) { /* line 79, sass/_header.scss */
   .sticky-header #header-wrapper { box-shadow: 0 0 3px 3px rgba(20, 21, 36, 0.15); left: 0; position: fixed; top: 0; width: 100%; z-index: 999; } }
 
