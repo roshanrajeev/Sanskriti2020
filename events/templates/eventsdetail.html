@@ -221,8 +221,9 @@
 						<div id="content-archive" class="content-area">
 
 							<header id="header">
-								<a href='{% url "home" %}'><img src="{% static 'subpage/img/logo.png'%}" alt="" class="logo-complete"></a>
+                <a href='{% url "home" %}'><img src="{% static 'subpage/img/logo.png'%}" alt="" class="logo-complete"></a>
 								<a href='{% url "home" %}'><img src="{% static 'subpage/img/logo-butterfly.png'%}" alt="" class="logo-partial"></a>
+                <h1>{{ events.event_type }} Event</h1>
 							</header>
 
 
@@ -239,7 +240,7 @@
           class="event-category-music post-1124 events type-events status-publish has-post-thumbnail hentry">
 
 
-          <header id="event_header_wrapper"  style="margin-top:80px;" class="single-header-event header-content wrapper">
+          <header id="event_header_wrapper" class="single-header-event header-content wrapper">
             <div class="header-container container">
               <div class="header_img">
                 <!--########################   CONTENT IAMGE Should Keep image placeholder here   ############################-->
