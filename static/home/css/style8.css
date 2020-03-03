@@ -542,16 +542,15 @@
     padding: 0px 10px;
 }
 
-#other-main-events .color-trans-effect{
+#other-main-events .trans-effect img.color-trans{
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
-    transition: all ease-in-out 100ms;
+    transition: all ease-in-out 250ms;
 }
 
-#other-main-events .color-trans-effect-add{
+#other-main-events .trans-effect:hover img.color-trans{
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
-    transition: all ease-in-out 100ms;
 }
 
 @media (max-width: 1450px){
