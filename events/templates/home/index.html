@@ -3,283 +3,316 @@
 <html lang="en-US">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="xmlrpc.html">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="xmlrpc.html">
 
-<!-- Favicons
+	<!-- Favicons
 ================================================== -->
-<link rel="shortcut icon" href="{%static 'img/fav.png'%}">
+	<link rel="shortcut icon" href="{%static 'img/fav.png'%}">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-<script>
-	$(window).load(function() {
-		$(".se-pre-con").fadeOut("slow");;
-	});
-</script>
-	
-
-<style>
-	.no-js #loader { display: none;  }
-	.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-	.se-pre-con {
-		position: fixed;
-		left: 0px;
-		top: 0px;
-		width: 100%;
-		height: 100%;
-		z-index: 9999;
-		background: url('{%static "home/img/Preloader_11.gif"%}') center no-repeat #fff;
-	}
-</style>
+	<script>
+		$(window).load(function () {
+			$(".se-pre-con").fadeOut("slow");;
+		});
+	</script>
 
 
-<title>Sanskriti 2020</title>
+	<style>
+		.no-js #loader {
+			display: none;
+		}
 
-<link rel='dns-prefetch' href='http://ajax.googleapis.com/' />
-<link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
-<link rel="alternate" type="application/rss+xml" title="Sanskriti 2020 &raquo; Feed" href="feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title="Sanskriti 2020 &raquo; Comments Feed" href="comments/feed/index.html" />
+		.js #loader {
+			display: block;
+			position: absolute;
+			left: 100px;
+			top: 0;
+		}
 
-<link rel='stylesheet' id='wp-block-library-css'  href='{%static "home/css/style.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='thunder-bolt-style-css'  href='{%static "home/css/style.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-css'  href='{%static "home/css/font-awesome.min.css"%}' type='text/css' media='all' />
-<script type='text/javascript' src='{% static "home/js/jquery.min.js" %}'></script>
-<script type='text/javascript' src='{% static "home/js/jquery.min.js" %}'></script>
-<script type='text/javascript' src='{% static "home/js/cookie.js" %}'></script>
-<script type='text/javascript' src='{% static "home/js/popup.js" %}'></script>
-<script type='text/javascript' src='{% static "home/js/slick.js" %}'></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js'></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js'></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js'></script>
-<script type='text/javascript' src='{% static "home/js/tweens.js" %}'></script>
-<script type='text/javascript' src='{% static "home/js/skrollr.min.js" %}'></script>
-<!-- <script type='text/javascript' src='{% static "home/js/skrollr.inits.js" %}'></script> -->
-<script type='text/javascript' src='{% static "home/js/inits.js" %}'></script>
-<link rel='https://api.w.org/' href='wp-json/index.html' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.3.2" />
-<link rel='shortlink' href='index.html' />
-<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed7dbe.json?url=http%3A%2F%2Fmurmurationfest.com%2F" />
-<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embedcc2b?url=http%3A%2F%2Fmurmurationfest.com%2F&amp;format=xml" />
+		.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url('{%static "home/img/Preloader_11.gif"%}') center no-repeat #fff;
+		}
+	</style>
 
 
+	<title>Sanskriti 2020</title>
+
+	<link rel='dns-prefetch' href='http://ajax.googleapis.com/' />
+	<link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
+	<link rel="alternate" type="application/rss+xml" title="Sanskriti 2020 &raquo; Feed" href="feed/index.html" />
+	<link rel="alternate" type="application/rss+xml" title="Sanskriti 2020 &raquo; Comments Feed"
+		href="comments/feed/index.html" />
+
+	<link rel='stylesheet' id='wp-block-library-css' href='{%static "home/css/style.min.css"%}' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='thunder-bolt-style-css' href='{%static "home/css/style.css"%}' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='font-awesome-css' href='{%static "home/css/font-awesome.min.css"%}' type='text/css'
+		media='all' />
+	<script type='text/javascript' src='{% static "home/js/jquery.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "home/js/jquery.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "home/js/cookie.js" %}'></script>
+	<script type='text/javascript' src='{% static "home/js/popup.js" %}'></script>
+	<script type='text/javascript' src='{% static "home/js/slick.js" %}'></script>
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js'></script>
+	<script type='text/javascript'
+		src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js'></script>
+	<script type='text/javascript'
+		src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js'></script>
+	<script type='text/javascript' src='{% static "home/js/tweens.js" %}'></script>
+	<script type='text/javascript' src='{% static "home/js/skrollr.min.js" %}'></script>
+	<!-- <script type='text/javascript' src='{% static "home/js/skrollr.inits.js" %}'></script> -->
+	<script type='text/javascript' src='{% static "home/js/inits.js" %}'></script>
+	<link rel='https://api.w.org/' href='wp-json/index.html' />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+	<meta name="generator" content="WordPress 5.3.2" />
+	<link rel='shortlink' href='index.html' />
+	<link rel="alternate" type="application/json+oembed"
+		href="wp-json/oembed/1.0/embed7dbe.json?url=http%3A%2F%2Fmurmurationfest.com%2F" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="wp-json/oembed/1.0/embedcc2b?url=http%3A%2F%2Fmurmurationfest.com%2F&amp;format=xml" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700,800,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href='{%static "home/css/style8.css"%}'>
-<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href='{%static "home/css/border.css"%}'>
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<link rel="stylesheet" href='{%static "home/css/hover.css"%}'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href='{%static "home/css/animate.css"%}'>
-<link rel="stylesheet" href='{%static "home/css/leavesAnim.css"%}'>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700,800,900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href='{%static "home/css/style8.css"%}'>
+	<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href='{%static "home/css/border.css"%}'>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href='{%static "home/css/hover.css"%}'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href='{%static "home/css/animate.css"%}'>
+	<link rel="stylesheet" href='{%static "home/css/leavesAnim.css"%}'>
 
 
 
-<script type="text/javascript">
-	window._se_plugin_version = '8.1.9';
-</script>
+	<script type="text/javascript">
+		window._se_plugin_version = '8.1.9';
+	</script>
 </head>
 
 <body id="body" class="home page-template page-template-page-home page-template-page-home-php page page-id-27">
 
 	<div class="se-pre-con"></div>
 
-<div id="page" class="site">
-	
-	<div id="bg-fore" class="scrolling-bg" data-end="background-position:50% 200%;" data-0="background-position:50% 0%;"></div>
-	<div id="bg-mid" class="scrolling-bg" data-end="background-position:50% 150%;" data-0="background-position:50% 0%;"></div>
-	<div id="bg-back" class="scrolling-bg" data-end="background-position:50% 100%;" data-0="background-position:50% 0%;"></div>
-		
-	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<div id="page" class="site">
 
-	<div id="header-wrapper" class="wrapper gray"> 
-		<header id="masthead" class="site-header container" role="banner">
-			
-			
-<a class="burger nav-trigger" href="javascript:;">
-	<figure></figure>
-	<figcaption>Menu</figcaption>
-</a>
+		<div id="bg-fore" class="scrolling-bg" data-end="background-position:50% 200%;"
+			data-0="background-position:50% 0%;"></div>
+		<div id="bg-mid" class="scrolling-bg" data-end="background-position:50% 150%;"
+			data-0="background-position:50% 0%;"></div>
+		<div id="bg-back" class="scrolling-bg" data-end="background-position:50% 100%;"
+			data-0="background-position:50% 0%;"></div>
+
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<div id="header-wrapper" class="wrapper gray">
+			<header id="masthead" class="site-header container" role="banner">
 
 
-			
-<nav id="modal-navigation" role="navigation">	
+				<a class="burger nav-trigger" href="javascript:;">
+					<figure></figure>
+					<figcaption>Menu</figcaption>
+				</a>
 
-		<div id="modal-nav-header">
-			<a id="modal-nav-logo" href="{% url 'home' %}">
-				<img src='{% static "home/img/logo/butterfly-logo.png" %}' alt="" width="100px">
-			</a>
-			<a id="nav-close" class="close" href="javascript:;">
-				<figure></figure>
-				<figcaption>Close</figcaption>
-			</a>
-		</div>
-	
-		<div id="modal-nav-content">
-			
-<nav id="modal-nav-menu" class="column eight right" role="navigation">	
-	<div id="primary-navigation">
-		<div class="menu-main-navigation-container">
-			<ul id="menu-main-navigation" class="menu">
-				<li id="menu-item-601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-601"><a href="{% url 'EventView' %}">Events</a></li>
-				<li id="menu-item-1261" class="menu-item menu-item-type-post_type_archive menu-item-object-events menu-item-has-children menu-item-1261"><a href="lineup/index.html">About</a></li>
-				<li id="menu-item-1781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781"><a href="{% url 'arangu' %}">Arangu</a></li>
-				<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="{% url 'inter' %}">Inter</a></li>
-				<!--<li id="menu-item-1930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1930"><a href="{% url 'arangu' %}">Memolane</a></li>
+
+
+				<nav id="modal-navigation" role="navigation">
+
+					<div id="modal-nav-header">
+						<a id="modal-nav-logo" href="{% url 'home' %}">
+							<img src='{% static "home/img/logo/butterfly-logo.png" %}' alt="" width="100px">
+						</a>
+						<a id="nav-close" class="close" href="javascript:;">
+							<figure></figure>
+							<figcaption>Close</figcaption>
+						</a>
+					</div>
+
+					<div id="modal-nav-content">
+
+						<nav id="modal-nav-menu" class="column eight right" role="navigation">
+							<div id="primary-navigation">
+								<div class="menu-main-navigation-container">
+									<ul id="menu-main-navigation" class="menu">
+										<li id="menu-item-601"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-601">
+											<a href="{% url 'EventView' %}">Events</a></li>
+										<li id="menu-item-1261"
+											class="menu-item menu-item-type-post_type_archive menu-item-object-events menu-item-has-children menu-item-1261">
+											<a href="lineup/index.html">About</a></li>
+										<li id="menu-item-1781"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781">
+											<a href="{% url 'arangu' %}">Arangu</a></li>
+										<li id="menu-item-443"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443">
+											<a href="{% url 'inter' %}">Inter</a></li>
+										<!--<li id="menu-item-1930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1930"><a href="{% url 'arangu' %}">Memolane</a></li>
 				<li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a href="sponsors/index.html">SPONSORS</a></li>-->
-			</ul> 
-		</div>	
-	</div>
-	<div id="modal-search">
-		
-	</div>
-</nav><!-- #primary-navigation -->
-			
-<nav id="modal-nav-utility" class="column eight">	
-	
-	<div id="welcome-message">
-					<h3>A 3-DAY EVENT<br>YOU WON’T<br>WANT TO MISS!</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
-			
-	</div><!-- #welcome-message -->
-	
-	<div id="modal-social">
-		
-		<!-- SOCIAL MEDIA LINKS -->
-	<ul class="social-nav">
-							<li><a href="https://twitter.com/MurmurationFest" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="https://www.facebook.com/sanskritimace/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="https://www.instagram.com/sanskriti.mace/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="mailto:info@murmurationfest.com"><i class="fa fa-envelope"></i></a></li>
-				
-	</ul>
-	</div><!-- #modal-social -->
-	
-	<div id="press-info">
-					<h3>PRESS</h3>
-					<p>If you are interested in applying for press credentials, please <a href="press/index.html">REVIEW OUR GUIDELINES.</a></p>
-			
-	</div><!-- #press-info -->
-	
-	<div id='site-credit'>
-		<a>
-			<span>Website Created by</span>
-			<span>Roshan</span>
-		</a>
-	</div> <!-- #site-credit-->
-	
-	
-</nav><!-- #utlitly-navigation -->		</div> <!-- #modal-nav-content -->
-		
-</nav><!-- #modal-navigation -->
-<div id="header-logo">
-	<h1><a href="/">Mar Athanasius</a></h1>
-	<h2><a href="/">College of Engineering</a></h2>
-</div>
+									</ul>
+								</div>
+							</div>
+							<div id="modal-search">
+
+							</div>
+						</nav><!-- #primary-navigation -->
+
+						<nav id="modal-nav-utility" class="column eight">
+
+							<div id="welcome-message">
+								<h3>A 3-DAY EVENT<br>YOU WON’T<br>WANT TO MISS!</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+									Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+									unknown printer took a galley of type and scrambled it.</p>
+
+							</div><!-- #welcome-message -->
+
+							<div id="modal-social">
+
+								<!-- SOCIAL MEDIA LINKS -->
+								<ul class="social-nav">
+									<li><a href="https://twitter.com/MurmurationFest" target="_blank"><i
+												class="fa fa-twitter"></i></a></li>
+									<li><a href="https://www.facebook.com/sanskritimace/" target="_blank"><i
+												class="fa fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com/sanskriti.mace/" target="_blank"><i
+												class="fa fa-instagram"></i></a></li>
+									<li><a href="mailto:info@murmurationfest.com"><i class="fa fa-envelope"></i></a>
+									</li>
+
+								</ul>
+							</div><!-- #modal-social -->
+
+							<div id="press-info">
+								<h3>PRESS</h3>
+								<p>If you are interested in applying for press credentials, please <a
+										href="press/index.html">REVIEW OUR GUIDELINES.</a></p>
+
+							</div><!-- #press-info -->
+
+							<div id='site-credit'>
+								<a>
+									<span>Website Created by</span>
+									<span>Roshan</span>
+								</a>
+							</div> <!-- #site-credit-->
 
 
-	
-	<div id="header-cta" class="desktop">
-		<a href="{% url 'EventView' %}" class="button arrow-button">All Events</a>
-	</div><!-- .header-cta -->
-			
-		</header><!-- #masthead -->
-	</div><!-- #header-wrapper -->
-	
-	<div id="template-wrapper" class="wrapper">
-		<div id="template" class="site-content">
+						</nav><!-- #utlitly-navigation -->
+					</div> <!-- #modal-nav-content -->
 
-	
-<section id="home-feature-wrapper" class="wrapper viewport-height">
-	<div class="viewport-height leaves" >
-		<div class="set set1">
-            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
-        </div>
-        <div class="set set2">
-            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
-        </div>
-        <div class="set set3">
-            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
-            <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
-        </div>
-	</div> <!-- #home-feature -->
-
-
-  	<div id="animated-headline" class="sanskriti-logo">
-	  <img src='{% static "home/img/logo/logo.png" %}' alt="" class="logo-above">
-	</div><!-- animated-headline -->
-	
-	
-	<div id="feature-detail-cta">
-		<div id="feature-detail">
-			<div id="feature-date">
-				March 19,20,21
-			</div>
-			<div id="feature-location">
-				At Kothamangalam,<br>
-				Ernakulam
-			</div>
-		</div> <!-- #feature-detail -->
-			<div id="feature-cta">
-				<a href="{% url 'EventView' %}" class="button arrow-button">All Events</a>
-			</div><!-- #feature-cta -->
-	</div><!-- #feature-detail-cta -->
-	
-</section><!-- #home-feature-wrapper -->
-
-
-<script src='{% static "home/js/tiltfx.js" %}'></script>
-	
-
-<section id="home-fold" class="wrapper">
-	<div id="home-fold-container" class="container">
-		<div class="timer-container">
-			<ul>
-			  <li><span id="days"></span>Days</li>
-			  <li><span id="hours"></span>Hours</li>
-			  <li><span id="minutes"></span>Minutes</li>
-			  <li><span id="seconds"></span>Seconds</li>
-			</ul>
-		</div>
-		<script src='{% static "home/js/timer.js"%}'></script>
-	</div><!-- #home-fold-container -->
-</section><!-- #home-fold -->
+				</nav><!-- #modal-navigation -->
+				<div id="header-logo">
+					<h1><a href="/">Mar Athanasius</a></h1>
+					<h2><a href="/">College of Engineering</a></h2>
+				</div>
 
 
 
+				<div id="header-cta" class="desktop">
+					<a href="{% url 'EventView' %}" class="button arrow-button">All Events</a>
+				</div><!-- .header-cta -->
 
-	
+			</header><!-- #masthead -->
+		</div><!-- #header-wrapper -->
+
+		<div id="template-wrapper" class="wrapper">
+			<div id="template" class="site-content">
+
+
+				<section id="home-feature-wrapper" class="wrapper viewport-height">
+					<div class="viewport-height leaves">
+						<div class="set set1">
+							<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+						</div>
+						<div class="set set2">
+							<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+						</div>
+						<div class="set set3">
+							<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
+							<div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
+						</div>
+					</div> <!-- #home-feature -->
+
+
+					<div id="animated-headline" class="sanskriti-logo">
+						<img src='{% static "home/img/logo/logo.png" %}' alt="" class="logo-above">
+					</div><!-- animated-headline -->
+
+
+					<div id="feature-detail-cta">
+						<div id="feature-detail">
+							<div id="feature-date">
+								March 19,20,21
+							</div>
+							<div id="feature-location">
+								At Kothamangalam,<br>
+								Ernakulam
+							</div>
+						</div> <!-- #feature-detail -->
+						<div id="feature-cta">
+							<a href="{% url 'EventView' %}" class="button arrow-button">All Events</a>
+						</div><!-- #feature-cta -->
+					</div><!-- #feature-detail-cta -->
+
+				</section><!-- #home-feature-wrapper -->
+
+
+				<script src='{% static "home/js/tiltfx.js" %}'></script>
+
+
+				<section id="home-fold" class="wrapper">
+					<div id="home-fold-container" class="container">
+						<div class="timer-container">
+							<ul>
+								<li><span id="days"></span>Days</li>
+								<li><span id="hours"></span>Hours</li>
+								<li><span id="minutes"></span>Minutes</li>
+								<li><span id="seconds"></span>Seconds</li>
+							</ul>
+						</div>
+						<script src='{% static "home/js/timer.js"%}'></script>
+					</div><!-- #home-fold-container -->
+				</section><!-- #home-fold -->
 
 
 
@@ -288,419 +321,482 @@
 
 
 
-<div id="about-section" class="wrapper" >
-	<div id="about-section-container" class="container">
-			<div class="column four offset-seven"> 
-				<h3>About Sanskriti</h3>
-			</div>
-			<div class="column six offset-ten abt-para"> 
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
-				been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
-				a galley of type and scrambled it to make a type specimen book.
-				<br /> <br /><br />
-				<a
-				style="
+
+
+
+
+
+				<div id="about-section" class="wrapper">
+					<div id="about-section-container" class="container">
+						<div class="column four offset-seven">
+							<h3>About Sanskriti</h3>
+						</div>
+						<div class="column six offset-ten abt-para">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+							a galley of type and scrambled it to make a type specimen book.
+							<br /> <br /><br />
+							<a style="
 				color: #f4ee6f;
 				margin: 0 0.25em;
 				border: 1px solid;
 				line-height: 2.5em;
 				padding: 0.925em 1.25em;
 				border-radius: 3px;
-				letter-spacing: 1px;"
+				letter-spacing: 1px;" href="sponsors/index.html">MORE ABOUT US</a>
+						</div>
+					</div><!-- #home-welcome-message-container -->
+				</div><!-- #home-welcome-message -->
 
-				href="sponsors/index.html">MORE ABOUT US</a>				
+
+
+				<div id="main-events" class="wrapper">
+					<div id="main-events-container">
+						<div class="column four offset-seven">
+							<h3 style="z-index: 2;">Celebrating Culture</h3>
+						</div>
+						<!-- data-aos-once="true" -->
+						<div id="main-events-images">
+							<div style="z-index: 2;" class="main-events-img1-container wow fadeInLeft"
+								data-wow-duration="1.6s" data-wow-delay="0.2s"><img class="main-events-img1"
+									src='{%static "home/img/sanskriti-img/events3/dj-choreo.jpg"%}' alt=""></div>
+							<div style="z-index: 2;" class="main-events-img2-container wow fadeInRight"
+								data-wow-duration="1.6s" data-wow-delay="0.3s"><img class="main-events-img2"
+									src='{%static "home/img/sanskriti-img/events3/Takara.jpg"%}' alt=""></div>
+							<div style="z-index: 2;" class="main-events-img3-container wow fadeInRight"
+								data-wow-duration="1.6s" data-wow-delay="0.6s"><img class="main-events-img3"
+									src='{%static "home/img/sanskriti-img/events3/divaat.jpg"%}' alt=""></div>
+						</div>
+					</div><!-- #home-welcome-message-container -->
+				</div><!-- #home-welcome-message -->
+
+
+				<script>
+					new WOW().init();
+				</script>
+
+				<div id="other-main-events" class="wrapper">
+					<div id="other-main-events-container">
+
+
+						<div class="arangu-event flex flex-left" data-aos="fade-left" data-aos-duration="900"
+							data-aos-delay="50" data-aos-once="true">
+							<img style="z-index: 2;" src='{%static "home/img/sanskriti-img/events3/arangu.jpg"%}'
+								alt="">
+							<h1 style="z-index: 2;">Arangu</h1>
+							<p style="z-index: 2;">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen
+								book.
+							</p>
+							<a style="z-index: 2;" href="{% url 'EventView' %}" class="btn-margin-left">All Events</a>
+						</div>
+
+
+						<div class="inter-event flex flex-right trans-effect" data-aos="fade-right"
+							data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+							<img style="z-index: 2;" class="color-trans-img color-trans-effect"
+								src='{%static "home/img/sanskriti-img/events3/inter.jpg"%}' alt="">
+							<h1 style="z-index: 2;">Inter</h1>
+							<p style="z-index: 2;">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen
+								book.
+							</p>
+							<a style="z-index: 2;" href="{% url 'EventView' %}" class="btn-margin-right">All Events</a>
+						</div>
+
+
+						<div class="alai-event flex flex-left trans-effect" data-aos="fade-left" data-aos-duration="900"
+							data-aos-delay="50" data-aos-once="true">
+							<img style="z-index: 2;" class="color-trans-img color-trans-effect"
+								src='{%static "home/img/sanskriti-img/events3/alai.jpg"%}' alt="">
+							<h1 style="z-index: 2;">Alai</h1>
+							<p style="z-index: 2;">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen
+								book.
+							</p>
+							<a style="z-index: 2;" href="#" class="btn-margin-left">Read More</a>
+						</div>
+
+
+						<div class="film-event flex flex-right trans-effect" data-aos="fade-right"
+							data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+							<img style="z-index: 2;" class="color-trans-img color-trans-effect"
+								src='{%static "home/img/sanskriti-img/events3/minukku.jpg"%}' alt="">
+							<h1 style="z-index: 2;">Film Festival</h1>
+							<p style="z-index: 2;">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen
+								book.
+							</p>
+							<a style="z-index: 2;" href="#" class="btn-margin-right">Read More</a>
+						</div>
+
+
+						<div class="jaalakam-event flex flex-left trans-effect" data-aos="fade-left"
+							data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+							<img style="z-index: 2;" class="color-trans-img color-trans-effect"
+								src='{%static "home/img/sanskriti-img/events3/jaalakam.jpg"%}' alt="">
+							<h1 style="z-index: 2;">Jaalakam</h1>
+							<p style="z-index: 2;">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen
+								book.
+							</p>
+							<a style="z-index: 2;" href="#" class="btn-margin-right">Read More</a>
+						</div>
+
+
+					</div>
 				</div>
-	</div><!-- #home-welcome-message-container -->	
-</div><!-- #home-welcome-message -->
 
 
 
-	<div id="main-events" class="wrapper">
-		<div id="main-events-container">
-				<div class="column four offset-seven"> 
-					<h3 style="z-index: 2;">Celebrating Culture</h3>
-				</div>
-				<!-- data-aos-once="true" -->
-				<div id="main-events-images">
-					<div style="z-index: 2;" class="main-events-img1-container wow fadeInLeft" data-wow-duration="1.6s" data-wow-delay="0.2s"><img class="main-events-img1" src='{%static "home/img/sanskriti-img/events3/dj-choreo.jpg"%}' alt=""></div>
-					<div style="z-index: 2;" class="main-events-img2-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.3s"><img class="main-events-img2" src='{%static "home/img/sanskriti-img/events3/Takara.jpg"%}' alt=""></div>
-					<div style="z-index: 2;" class="main-events-img3-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.6s"><img class="main-events-img3" src='{%static "home/img/sanskriti-img/events3/divaat.jpg"%}' alt=""></div>
-				</div>
-		</div><!-- #home-welcome-message-container -->	
-	</div><!-- #home-welcome-message -->
 
 
-	<script>
-		new WOW().init();
-	</script>
+				<div id="home-event-slider" class="wrapper" style="z-index: 2;">
+					<div class="music_thought_title container">
+						<h1 class="music"><a style="z-index: 2;" href="event-category/music/index.html">
+								Events</span></a></h1>
+					</div> <!-- .music_thought_title -->
 
-	<div id="other-main-events" class="wrapper">
-		<div id="other-main-events-container">
-
-
-			<div class="arangu-event flex flex-left" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img  style="z-index: 2;" src='{%static "home/img/sanskriti-img/events3/arangu.jpg"%}' alt="">
-				<h1 style="z-index: 2;" >Arangu</h1>
-				<p style="z-index: 2;" >
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</p>
-				<a  style="z-index: 2;" href="{% url 'EventView' %}" class="btn-margin-left">All Events</a>
-			</div>
-
-
-			<div class="inter-event flex flex-right trans-effect" data-aos="fade-right" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/inter.jpg"%}' alt="">
-				<h1 style="z-index: 2;" >Inter</h1>
-				<p style="z-index: 2;" >
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</p>
-				<a  style="z-index: 2;" href="{% url 'EventView' %}" class="btn-margin-right">All Events</a>
-			</div>
-
-
-			<div class="alai-event flex flex-left trans-effect" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/alai.jpg"%}' alt="">
-				<h1 style="z-index: 2;" >Alai</h1>
-				<p style="z-index: 2;" >
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</p>
-				<a  style="z-index: 2;" href="#" class="btn-margin-left">Read More</a>
-			</div>
-
-
-			<div class="film-event flex flex-right trans-effect" data-aos="fade-right" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/minukku.jpg"%}' alt="">
-				<h1 style="z-index: 2;" >Film Festival</h1>
-				<p style="z-index: 2;" >
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</p>
-				<a  style="z-index: 2;" href="#" class="btn-margin-right">Read More</a>
-			</div>
-
-
-			<div class="jaalakam-event flex flex-left trans-effect" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/jaalakam.jpg"%}' alt="">
-				<h1 style="z-index: 2;" >Jaalakam</h1>
-				<p style="z-index: 2;" >
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</p>
-				<a  style="z-index: 2;" href="#" class="btn-margin-right">Read More</a>
-			</div>
-
-			
-		</div>
-	</div>
-	
-
-
-
-	
-	<div id="home-event-slider" class="wrapper" style="z-index: 2;" >
-				<div class="music_thought_title container">
-					<h1 class="music"><a  style="z-index: 2;" href="event-category/music/index.html"> Events</span></a></h1>
-				</div> <!-- .music_thought_title -->
-		
-					<div class="event-slider"  style="z-index: 2;" >
-							<div class="event-slide music" style="z-index: 2;" >
-								<a class="event-slide-thumb" href="lineup/flying-lotus/index.html">
-										<img  style="z-index: 2;" width="500" height="400" src='{%static "home/img/sanskriti-img/events/djnite.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-										<div  style="z-index: 2;" class="event-name">
-												<h2><span>Dj Nite</span></h2>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<div class="event-slide thought">
-								<a class="event-slide-thumb" href="lineup/beyond-human-creativity-machine/index.html">
-									<img  style="z-index: 2;" src='{%static "home/img/sanskriti-img/events/jaalakam.jpg"%}' />
-									<div  style="z-index: 2;" class="event-details">
-										<div class="event-name">
-											<h2><span>Jaalakam</span></h2>
-										</div>
-									</div>
-								</a>
-							</div>
-							
-							<div class="event-slide music">
-								<a class="event-slide-thumb" href="lineup/tycho/index.html">
-										<img  style="z-index: 2;" width="500" height="400" src='{%static "home/img/sanskriti-img/events/choreoNite.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-										<div  style="z-index: 2;" class="event-name">
-												<h2><span>Dj Chore</span></h2>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="event-slide thought">
-								<a class="event-slide-thumb" href="lineup/innovations-impact/index.html">
-									<img style="z-index: 2;"  src='{%static "home/img/sanskriti-img/events/divaat2.jpg"%}' />
-									<div class="event-details">
-									<div style="z-index: 2;"  class="event-name">
-											<h2><span>Divaat</span></h2>
+					<div class="event-slider" style="z-index: 2;">
+						<div class="event-slide music" style="z-index: 2;">
+							<a class="event-slide-thumb" href="lineup/flying-lotus/index.html">
+								<img style="z-index: 2;" width="500" height="400"
+									src='{%static "home/img/sanskriti-img/events/djnite.jpg"%}'
+									class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />
+								<div class="event-details">
+									<div style="z-index: 2;" class="event-name">
+										<h2><span>Dj Nite</span></h2>
 									</div>
 								</div>
 							</a>
-					</div>
-									<div class="event-slide music">
+						</div>
+
+						<div class="event-slide thought">
+							<a class="event-slide-thumb" href="lineup/beyond-human-creativity-machine/index.html">
+								<img style="z-index: 2;"
+									src='{%static "home/img/sanskriti-img/events/jaalakam.jpg"%}' />
+								<div style="z-index: 2;" class="event-details">
+									<div class="event-name">
+										<h2><span>Jaalakam</span></h2>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="event-slide music">
+							<a class="event-slide-thumb" href="lineup/tycho/index.html">
+								<img style="z-index: 2;" width="500" height="400"
+									src='{%static "home/img/sanskriti-img/events/choreoNite.jpg"%}'
+									class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />
+								<div class="event-details">
+									<div style="z-index: 2;" class="event-name">
+										<h2><span>Dj Chore</span></h2>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="event-slide thought">
+							<a class="event-slide-thumb" href="lineup/innovations-impact/index.html">
+								<img style="z-index: 2;" src='{%static "home/img/sanskriti-img/events/divaat2.jpg"%}' />
+								<div class="event-details">
+									<div style="z-index: 2;" class="event-name">
+										<h2><span>Divaat</span></h2>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="event-slide music">
 							<a class="event-slide-thumb" href="lineup/deerhoof/index.html">
-																	<img style="z-index: 2;"  width="500" height="400" src='{%static "home/img/sanskriti-img/events/alai.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div  style="z-index: 2;" class="event-name">
-											<h2><span>Alai</span></h2>
+								<img style="z-index: 2;" width="500" height="400"
+									src='{%static "home/img/sanskriti-img/events/alai.jpg"%}'
+									class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />
+								<div class="event-details">
+									<div style="z-index: 2;" class="event-name">
+										<h2><span>Alai</span></h2>
 									</div>
 								</div>
 							</a>
-					</div>
-									<div class="event-slide thought">
+						</div>
+						<div class="event-slide thought">
 							<a class="event-slide-thumb" href="lineup/technology-of-storytelling/index.html">
-									
-									<img  style="z-index: 2;" src='{%static "home/img/sanskriti-img/events/minukku.jpg"%}' />
-																<div class="event-details">
-									<div  style="z-index: 2;" class="event-name">
-											<h2><span>Minukku</span></h2>
+
+								<img style="z-index: 2;" src='{%static "home/img/sanskriti-img/events/minukku.jpg"%}' />
+								<div class="event-details">
+									<div style="z-index: 2;" class="event-name">
+										<h2><span>Minukku</span></h2>
 									</div>
 								</div>
 							</a>
-					</div>
-									<div class="event-slide music">
+						</div>
+						<div class="event-slide music">
 							<a class="event-slide-thumb" href="lineup/yacht/index.html">
-																	<img width="500" height="400" src='{%static "home/img/sanskriti-img/events/arangu.jpg"%}' class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />																<div class="event-details">
-									<div  style="z-index: 2;" class="event-name">
-											<h2 style="z-index: 2;" ><span>Mace Utsav</span></h2>
+								<img width="500" height="400"
+									src='{%static "home/img/sanskriti-img/events/arangu.jpg"%}'
+									class="attachment-event_slide_thumb size-event_slide_thumb wp-post-image" alt="" />
+								<div class="event-details">
+									<div style="z-index: 2;" class="event-name">
+										<h2 style="z-index: 2;"><span>Mace Utsav</span></h2>
 									</div>
 								</div>
 							</a>
+						</div>
+
+					</div><!-- .event-slider -->
+					<div class="home-event-cta container">
+						<a class="button red-button" href="{% url 'arangu' %}">Arangu Events</a>
+						<a class="button yellow-button" href="{% url 'inter' %}">Inter Events</a>
+					</div> <!-- .home-event-cta -->
+				</div> <!-- #home-event-slider -->
+
+
+
+
+
+
+
+				<div id="contact-section">
+					<div id="contact-section-container">
+						<div class="contact-header">
+							<h1 style="color: white;">Stay tuned for more updates</h1>
+							<img src='{%static "home/img/sanskriti-img/wavy.png"%}' alt="">
+							<p style="font-weight: normal; color: rgb(210, 210, 210);">
+								Follow our social media channels at Facebook
+								and instagram and stay tuned for more updates
+								about the sanskriti'20 and sub events.
+							</p>
+						</div>
+						<div class="flex flex-container">
+							<div class="contact-links">
+								<ul>
+									<li class="bold-text"
+										style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: white;">
+										Quick Links</li>
+									<li><a href="#"
+											style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">About</a>
+									</li>
+									<li><a href="#"
+											style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Arangu</a>
+									</li>
+									<li><a href="#"
+											style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Events</a>
+									</li>
+								</ul>
+							</div>
+							<div class="contact-support">
+								<ul>
+									<li href="#"
+										style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: white;">
+										Support</li>
+									<li><a href="#"
+											style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: rgb(210, 210, 210);"><i
+												class="fa fa-envelope"></i> sanskriti@mace.ac.in</a></li>
+									<li
+										style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: rgb(210, 210, 210);">
+										<i class="fa fa-map-marker fa-pull-left" aria-hidden="true"></i>
+										Mar Athanasius College
+										of Engineering,
+										Kothamangalam, Ernakulam
+										Kerala , India
+									</li>
+								</ul>
+							</div>
+							<div class="contact-main-events">
+								<ul>
+									<li class="bold-text"
+										style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: white;">
+										Prime Events</li>
+									<li><a href="#"
+											style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Arangu</a>
+									</li>
+									<li><a href="#"
+											style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Inter</a>
+									</li>
+									<li><a href="#"
+											style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Film
+											Festival</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
-					
-							</div><!-- .event-slider -->
-			<div class="home-event-cta container">
-				<a class="button red-button" href="{% url 'arangu' %}">Arangu Events</a>
-				<a class="button yellow-button" href="{% url 'inter' %}">Inter Events</a>
-			</div>  <!-- .home-event-cta -->
-			</div> <!-- #home-event-slider -->
-	
-	
-
-
-
-
-
-	<div id="contact-section">
-		<div id="contact-section-container">
-			<div class="contact-header">
-				<h1 style="color: white;">Stay tuned for more updates</h1>
-				<img src='{%static "home/img/sanskriti-img/wavy.png"%}' alt="">
-				<p style="font-weight: normal; color: rgb(210, 210, 210);">
-					Follow our social media channels at Facebook
-					and instagram and stay tuned for more updates 
-					about the sanskriti'20 and sub events.
-				</p>
-			</div>
-			<div class="flex flex-container">
-				<div class="contact-links">
-					<ul>
-						<li class="bold-text" style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: white;">Quick Links</li>
-						<li><a href="#" style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">About</a></li>
-						<li><a href="#" style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Arangu</a></li>
-						<li><a href="#" style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Events</a></li>
-					</ul>
 				</div>
-				<div class="contact-support">
-					<ul>
-						<li href="#" style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: white;">Support</li>
-						<li><a href="#" style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: rgb(210, 210, 210);"><i class="fa fa-envelope"></i> sanskriti@mace.ac.in</a></li>
-						<li style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: rgb(210, 210, 210);">
-							<i class="fa fa-map-marker fa-pull-left" aria-hidden="true"></i>
-							Mar Athanasius College
-							of Engineering,
-							Kothamangalam, Ernakulam
-							Kerala , India
-						</li>
-					</ul>
-				</div>
-				<div class="contact-main-events">
-					<ul>
-						<li class="bold-text" style="font-family: 'Alegreya Sans', sans-serif; font-weight: bold; color: white;">Prime Events</li>
-						<li><a href="#" style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Arangu</a></li>
-						<li><a href="#" style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Inter</a></li>
-						<li><a href="#" style="font-family: 'Alegreya Sans', sans-serif;font-weight: bold; color: rgb(210, 210, 210);">Film Festival</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	
-	
-	
-	<script>
-		$('.event-slider').slick({
-		  infinite: false,
-		  speed: 300,
-		  slidesToShow: 5,
-		  slidesToScroll: 1,
-		  appendArrows: '.home-event-cta.container',
-		  responsive: [
-		    {
-		      breakpoint: 1400,
-		      settings: {
+
+
+
+				<script>
+					$('.event-slider').slick({
 						infinite: false,
-		        slidesToShow: 4,
-		      }
-		    },
-		    {
-		      breakpoint: 959,
-		      settings: {
-			      infinite: false,
-		        slidesToShow: 3,
-		        slidesToScroll: 1
-		      }
-		    },
-		    {
-		      breakpoint: 767,
-		      settings: {
-			      infinite: false,
-		        slidesToShow: 2,
-		        slidesToScroll: 1
-		      }
-		    },
-		    {
-		      breakpoint: 580,
-		      settings: {
-			      infinite: false,
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
-		    }
-		    // You can unslick at a given breakpoint now by adding:
-		    // settings: "unslick"
-		    // instead of a settings object
-		  ]
-		});
-	</script>
-	
+						speed: 300,
+						slidesToShow: 5,
+						slidesToScroll: 1,
+						appendArrows: '.home-event-cta.container',
+						responsive: [
+							{
+								breakpoint: 1400,
+								settings: {
+									infinite: false,
+									slidesToShow: 4,
+								}
+							},
+							{
+								breakpoint: 959,
+								settings: {
+									infinite: false,
+									slidesToShow: 3,
+									slidesToScroll: 1
+								}
+							},
+							{
+								breakpoint: 767,
+								settings: {
+									infinite: false,
+									slidesToShow: 2,
+									slidesToScroll: 1
+								}
+							},
+							{
+								breakpoint: 580,
+								settings: {
+									infinite: false,
+									slidesToShow: 1,
+									slidesToScroll: 1
+								}
+							}
+							// You can unslick at a given breakpoint now by adding:
+							// settings: "unslick"
+							// instead of a settings object
+						]
+					});
+				</script>
 
-		</div><!-- #template -->
-	</div><!-- #template-wrapper -->
-	
-	
-	
-	<script>
-		jQuery(document).ready(function($){
-			//cache some jQuery objects
-			var 
-				modalTrigger = $('.promo-gate-trigger'),
-				transitionLayer = $('.promo-gate-transition-layer'),
-				transitionBackground = transitionLayer.children(),
-				modalWindow = $('.promo-gate');
-			var frameProportion = 1.78, //png frame aspect ratio
-				frames = 25, //number of png frames
-				resize = false;
-			//set transitionBackground dimentions
-			setLayerDimensions();
-			$(window).on('resize', function(){
-				if( !resize ) {
-					resize = true;
-					(!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
-				}
-			});
-			//open modal window
-			$(window).load( function(event) {
-				
-				var myCookie = readCookie('hide-promo-gate-Murmuration-Festival');
-				
-		    scrollPosition = $(this).scrollTop();
-		    if (scrollPosition >= 0 && !myCookie) {	
+
+			</div><!-- #template -->
+		</div><!-- #template-wrapper -->
+
+
+
+		<script>
+			jQuery(document).ready(function ($) {
+				//cache some jQuery objects
+				var
+					modalTrigger = $('.promo-gate-trigger'),
+					transitionLayer = $('.promo-gate-transition-layer'),
+					transitionBackground = transitionLayer.children(),
+					modalWindow = $('.promo-gate');
+				var frameProportion = 1.78, //png frame aspect ratio
+					frames = 25, //number of png frames
+					resize = false;
+				//set transitionBackground dimentions
+				setLayerDimensions();
+				$(window).on('resize', function () {
+					if (!resize) {
+						resize = true;
+						(!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
+					}
+				});
+				//open modal window
+				$(window).load(function (event) {
+
+					var myCookie = readCookie('hide-promo-gate-Murmuration-Festival');
+
+					scrollPosition = $(this).scrollTop();
+					if (scrollPosition >= 0 && !myCookie) {
+						event.preventDefault();
+						transitionLayer.addClass('visible opening');
+						var delay = ($('.no-cssanimations').length > 0) ? 0 : 600;
+						setTimeout(function () {
+							modalWindow.addClass('visible');
+						}, delay);
+					}
+				});
+				//close modal window
+				modalWindow.on('click', '.promo-gate-close', function (event) {
 					event.preventDefault();
-					transitionLayer.addClass('visible opening');
-					var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
-					setTimeout(function(){
-						modalWindow.addClass('visible');
-					}, delay);
-			   }
-			});
-			//close modal window
-			modalWindow.on('click', '.promo-gate-close', function(event){
-				event.preventDefault();
-				transitionLayer.addClass('closing');
-				modalWindow.removeClass('visible');
-				transitionBackground.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-					transitionLayer.removeClass('closing opening visible');
-					transitionBackground.off('webkitAnimationEnd oanimationend msAnimationEnd animationend');
+					transitionLayer.addClass('closing');
+					modalWindow.removeClass('visible');
+					transitionBackground.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
+						transitionLayer.removeClass('closing opening visible');
+						transitionBackground.off('webkitAnimationEnd oanimationend msAnimationEnd animationend');
+					});
+					createCookie('hide-promo-gate-Murmuration-Festival', '1', 7);
 				});
-				createCookie('hide-promo-gate-Murmuration-Festival', '1', 7);
-			});
-			function setLayerDimensions() {
-				var windowWidth = $(window).width(),
-					windowHeight = $(window).height(),
-					layerHeight, layerWidth;
-				if( windowWidth/windowHeight > frameProportion ) {
-					layerWidth = windowWidth;
-					layerHeight = layerWidth/frameProportion;
-				} else {
-					layerHeight = windowHeight*1.2;
-					layerWidth = layerHeight*frameProportion;
+				function setLayerDimensions() {
+					var windowWidth = $(window).width(),
+						windowHeight = $(window).height(),
+						layerHeight, layerWidth;
+					if (windowWidth / windowHeight > frameProportion) {
+						layerWidth = windowWidth;
+						layerHeight = layerWidth / frameProportion;
+					} else {
+						layerHeight = windowHeight * 1.2;
+						layerWidth = layerHeight * frameProportion;
+					}
+					transitionBackground.css({
+						'width': layerWidth * frames + 'px',
+						'height': layerHeight + 'px',
+					});
+					resize = false;
 				}
-				transitionBackground.css({
-					'width': layerWidth*frames+'px',
-					'height': layerHeight+'px',
+			});
+		</script>
+	</div><!-- #page -->
+
+
+	<script>
+		$(document).ready(function () {
+			$(function () {
+				$(".ginput_container_post_image input[type=file]").change(function () {
+					var fileName = $(this).val().split('\\').pop();
+					var elementID = $(this).attr('id');
+					$(this).addClass('stuff');
+					$(this).parents('.ginput_container_post_image').addClass('parent_' + elementID);
+
+					$('<style>.parent_' + elementID + '::before{content:"' + fileName + '" !important}</style>').appendTo('head');
+
 				});
-				resize = false;
-			}
+			});
 		});
 	</script>
-</div><!-- #page -->
 
 
-<script>
-	$( document ).ready(function() {
-	 $(function() {
-		  $(".ginput_container_post_image input[type=file]").change(function() {
-		    var fileName = $(this).val().split( '\\' ).pop();
-		    var elementID = $(this).attr('id');
-		    $(this).addClass('stuff');
-				$(this).parents('.ginput_container_post_image').addClass('parent_' + elementID);
-				
-				$('<style>.parent_' + elementID + '::before{content:"' + fileName + '" !important}</style>').appendTo('head');
-				
-		  });
-		});
-	});
-</script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel='stylesheet' id='gforms_reset_css-css' href='{%static "home/vendor/gravityforms/css/formreset.min.css"%}'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='gforms_formsmain_css-css'
+		href='{%static "home/vendor/gravityforms/css/formsmain.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='gforms_ready_class_css-css'
+		href='{%static "home/vendor/gravityforms/css/readyclass.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='gforms_browsers_css-css'
+		href='{%static "home/vendor/gravityforms/css/browsers.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='gravityformsmailchimp_form_settings-css'
+		href='{%static "home/vendor/gravityformsmailchimp/css/form_settings.css"%}' type='text/css' media='all' />
+	<script type='text/javascript' src='{% static "home/js/skip-link-focus-fix.js"%}'></script>
+	<script type='text/javascript' src='{% static "home/js/wp-embed.min.js"%}'></script>
+	<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/jquery.json.min.js"%}'></script>
+	<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/gravityforms.min.js"%}'></script>
+	<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/placeholders.jquery.min.js"%}'></script>
+	<script src='{% static "home/js/script.js"%}'></script>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<link rel='stylesheet' id='gforms_reset_css-css'  href='{%static "home/vendor/gravityforms/css/formreset.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_formsmain_css-css'  href='{%static "home/vendor/gravityforms/css/formsmain.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_ready_class_css-css'  href='{%static "home/vendor/gravityforms/css/readyclass.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_browsers_css-css'  href='{%static "home/vendor/gravityforms/css/browsers.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gravityformsmailchimp_form_settings-css'  href='{%static "home/vendor/gravityformsmailchimp/css/form_settings.css"%}' type='text/css' media='all' />
-<script type='text/javascript' src='{% static "home/js/skip-link-focus-fix.js"%}'></script>
-<script type='text/javascript' src='{% static "home/js/wp-embed.min.js"%}'></script>
-<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/jquery.json.min.js"%}'></script>
-<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/gravityforms.min.js"%}'></script>
-<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/placeholders.jquery.min.js"%}'></script>
-<script src='{% static "home/js/script.js"%}'></script>
-
-<!-- <script type="text/javascript" src="{% static 'inter/js/skrollr.min.js' %}"></script> -->
+	<!-- <script type="text/javascript" src="{% static 'inter/js/skrollr.min.js' %}"></script> -->
 	<script type="text/javascript">
-		var s = skrollr.init({forceHeight: false});
+		var s = skrollr.init({ forceHeight: false });
 	</script>
 
 </body>
