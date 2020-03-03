@@ -1556,6 +1556,9 @@ body#body.home #header-wrapper #masthead #header-cta.desktop { display: none !im
 
 /* line 37, sass/_home.scss */
 .home #home-feature-wrapper { 
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center center;
   background-color: #1C1D30;
   min-height: 820px !important; 
   padding: 0; 

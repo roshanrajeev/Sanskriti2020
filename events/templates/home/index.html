@@ -201,8 +201,11 @@
 		<div id="template" class="site-content">
 
 	
-<section id="home-feature-wrapper" class="wrapper viewport-height">
+<section id="home-feature-wrapper" style="background-image:url({% static 'home/img/bg4.jpg' %});" class="wrapper viewport-height">
 	<div class="viewport-height leaves" >
+		<canvas class="p-canvas-webgl" id="canvas-webgl"></canvas>
+	</div>
+	<!-- <div class="viewport-height leaves" >
 		<div class="set set1">
             <div><img src='{% static "home/img/leaves/leaves1.png" %}' alt=""></div>
             <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
@@ -232,8 +235,9 @@
             <div><img src='{% static "home/img/leaves/leaves2.png" %}' alt=""></div>
             <div><img src='{% static "home/img/leaves/leaves3.png" %}' alt=""></div>
             <div><img src='{% static "home/img/leaves/leaves4.png" %}' alt=""></div>
-        </div>
-	</div> <!-- #home-feature -->
+		</div> 
+	
+	</div>--> <!-- #home-feature -->
 
 
   	<div id="animated-headline" class="sanskriti-logo">
@@ -321,11 +325,6 @@
 					<h3 style="z-index: 2;">Celebrating Culture</h3>
 				</div>
 				<!-- data-aos-once="true" -->
-				<div id="main-events-images">
-					<div style="z-index: 2;" class="main-events-img1-container wow fadeInLeft" data-wow-duration="1.6s" data-wow-delay="0.2s"><img class="main-events-img1" src='{%static "home/img/sanskriti-img/events3/dj-choreo.jpg"%}' alt=""></div>
-					<div style="z-index: 2;" class="main-events-img2-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.3s"><img class="main-events-img2" src='{%static "home/img/sanskriti-img/events3/Takara.jpg"%}' alt=""></div>
-					<div style="z-index: 2;" class="main-events-img3-container wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.6s"><img class="main-events-img3" src='{%static "home/img/sanskriti-img/events3/divaat.jpg"%}' alt=""></div>
-				</div>
 		</div><!-- #home-welcome-message-container -->	
 	</div><!-- #home-welcome-message -->
 
@@ -338,9 +337,9 @@
 		<div id="other-main-events-container">
 
 
-			<div class="arangu-event flex flex-left" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
-				<img  style="z-index: 2;" src='{%static "home/img/sanskriti-img/events3/arangu.jpg"%}' alt="">
-				<h1 style="z-index: 2;" >Arangu</h1>
+			<div class="arangu-event flex flex-left trans-effect" data-aos="fade-left" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
+				<img  style="z-index: 2;" class="color-trans-img color-trans-effect"  src='{%static "home/img/sanskriti-img/events3/arangu.jpg"%}' alt="">
+				<h1 style="z-index: 2;" >Arangu - Kalotsavam</h1>
 				<p style="z-index: 2;" >
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -352,7 +351,7 @@
 
 			<div class="inter-event flex flex-right trans-effect" data-aos="fade-right" data-aos-duration="900" data-aos-delay="50" data-aos-once="true">
 				<img  style="z-index: 2;" class="color-trans-img color-trans-effect" src='{%static "home/img/sanskriti-img/events3/inter.jpg"%}' alt="">
-				<h1 style="z-index: 2;" >Inter</h1>
+				<h1 style="z-index: 2;" >Inter College Events</h1>
 				<p style="z-index: 2;" >
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -394,7 +393,6 @@
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
-				<a  style="z-index: 2;" href="#" class="btn-margin-right">Read More</a>
 			</div>
 
 			
@@ -697,10 +695,32 @@
 <script type='text/javascript' src='{% static "home/vendor/gravityforms/js/gravityforms.min.js"%}'></script>
 <script type='text/javascript' src='{% static "home/vendor/gravityforms/js/placeholders.jquery.min.js"%}'></script>
 <script src='{% static "home/js/script.js"%}'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
 
 <!-- <script type="text/javascript" src="{% static 'inter/js/skrollr.min.js' %}"></script> -->
+
 	<script type="text/javascript">
 		var s = skrollr.init({forceHeight: false});
+	</script>
+
+	<script src='{% static "home/js/bgeffect.js"%}'></script>
+	<script type="text/javascript">
+	const init = () => {
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setClearColor(0x111111, 1.0);
+	cameraBack.position.set(0, 0, 100);
+	cameraBack.lookAt(new THREE.Vector3());
+
+	bgImg.init('{% static 'home/img/bg4.jpg' %}', () => {
+		sceneBack.add(bgImg.obj);
+		scene.add(postEffect.obj);
+	})
+
+	on();
+	resizeWindow();
+	renderLoop();
+	}
+	init();
 	</script>
 
 </body>
