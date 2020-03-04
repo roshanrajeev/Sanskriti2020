@@ -1029,7 +1029,7 @@ TABLE OF CONTENTS:
 5.0 - Search
 */
 /* line 25, sass/_content.scss */
-#page { background: #1e1f33; float: left; position: relative; overflow: hidden; width: 100%; }
+#page { background: #1e1f33; float: left; position: relative; /*overflow: hidden;*/ width: 100%; }
 
 /* line 34, sass/_content.scss */
 .scrolling-bg { bottom: 0; left: 0; position: fixed; right: 0; top: 0; }
