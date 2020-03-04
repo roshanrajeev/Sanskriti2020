@@ -26,5 +26,5 @@ urlpatterns = [
     path('events/<slug:slug>/', views.detailview, name='detailview'),
     path('arangu/', views.aranguview, name='arangu'),
     path('interevents/', views.interview, name='inter'),
-]+static('/media/', document_root='media/')
+]+static('/media/', document_root='media/')+static('/static/', document_root='static/')
 
