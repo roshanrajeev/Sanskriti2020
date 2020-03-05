@@ -20,6 +20,7 @@
 	$(window).load(function() {
 		$(".se-pre-con").fadeOut("slow");;
 	});
+	var headerBgImage = "static/home/img/bg4.jpg";
 </script>
 	
 
@@ -56,16 +57,12 @@
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js'></script>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js'></script>
 <script type='text/javascript' src='{% static "home/js/tweens.js" %}'></script>
-<!-- <script type='text/javascript' src='{% static "home/js/skrollr.min.js" %}'></script> -->
-<!-- <script type='text/javascript' src='{% static "home/js/skrollr.inits.js" %}'></script> -->
 <script type='text/javascript' src='{% static "home/js/inits.js" %}'></script>
 <link rel='https://api.w.org/' href='wp-json/index.html' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 5.3.2" />
 <link rel='shortlink' href='index.html' />
-<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed7dbe.json?url=http%3A%2F%2Fmurmurationfest.com%2F" />
-<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embedcc2b?url=http%3A%2F%2Fmurmurationfest.com%2F&amp;format=xml" />
 
 
 
@@ -127,7 +124,7 @@
 		<div id="template" class="site-content">
 
 	
-<section id="home-feature-wrapper" class="wrapper viewport-height">
+<section id="home-feature-wrapper" class="wrapper viewport-height" style="background-image: url({%static 'home/img/bg.jpg'%});">
 	<div class="viewport-height header-bg-canvas" >
 	
 	</div>
@@ -493,7 +490,7 @@ Take up those clapperboards and ready your cameras. Come and join us at MACE for
 			//open modal window
 			$(window).load( function(event) {
 				
-				var myCookie = readCookie('hide-promo-gate-Murmuration-Festival');
+				var myCookie =  null;
 				
 		    scrollPosition = $(this).scrollTop();
 		    if (scrollPosition >= 0 && !myCookie) {	
@@ -514,7 +511,7 @@ Take up those clapperboards and ready your cameras. Come and join us at MACE for
 					transitionLayer.removeClass('closing opening visible');
 					transitionBackground.off('webkitAnimationEnd oanimationend msAnimationEnd animationend');
 				});
-				createCookie('hide-promo-gate-Murmuration-Festival', '1', 7);
+				createCookie('hide-promo-gate-Sannskritii', '1', 7);
 			});
 			function setLayerDimensions() {
 				var windowWidth = $(window).width(),
@@ -563,24 +560,12 @@ Take up those clapperboards and ready your cameras. Come and join us at MACE for
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<link rel='stylesheet' id='gforms_reset_css-css'  href='{%static "home/vendor/gravityforms/css/formreset.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_formsmain_css-css'  href='{%static "home/vendor/gravityforms/css/formsmain.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_ready_class_css-css'  href='{%static "home/vendor/gravityforms/css/readyclass.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_browsers_css-css'  href='{%static "home/vendor/gravityforms/css/browsers.min.css"%}' type='text/css' media='all' />
-<link rel='stylesheet' id='gravityformsmailchimp_form_settings-css'  href='{%static "home/vendor/gravityformsmailchimp/css/form_settings.css"%}' type='text/css' media='all' />
 <script type='text/javascript' src='{% static "home/js/skip-link-focus-fix.js"%}'></script>
 <script type='text/javascript' src='{% static "home/js/wp-embed.min.js"%}'></script>
-<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/jquery.json.min.js"%}'></script>
-<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/gravityforms.min.js"%}'></script>
-<script type='text/javascript' src='{% static "home/vendor/gravityforms/js/placeholders.jquery.min.js"%}'></script>
 <script src='{% static "home/js/script.js"%}'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
 
-<!-- <script type="text/javascript" src="{% static 'inter/js/skrollr.min.js' %}"></script> -->
 
-	<script type="text/javascript">
-		var s = skrollr.init({forceHeight: false});
-	</script>
 
 	<script src='{% static "home/js/swirl/noise.min.js"%}'></script>
 	<script src='{% static "home/js/swirl/util.js"%}'></script>

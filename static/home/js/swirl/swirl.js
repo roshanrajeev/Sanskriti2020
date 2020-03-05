@@ -3,7 +3,7 @@
 const particleCount = 700;
 const particlePropCount = 9;
 const particlePropsLength = particleCount * particlePropCount;
-const rangeY = 100;
+var rangeY = 100;
 const baseTTL = 50;
 const rangeTTL = 150;
 const baseSpeed = 0.1;
@@ -36,7 +36,7 @@ let hues;
 var background = new Image();
 
 function setup() {
-  background.src = "http://localhost:8000/static/home/img/bg4.jpg";
+  background.src = headerBgImage;
   createCanvas();
   resize();
   initParticles();
@@ -64,7 +64,7 @@ function initParticle(i) {
   vy = 0;
   life = 0;
   ttl = baseTTL + rand(rangeTTL);
-  speed = baseSpeed + rand(rangeSpeed);
+  speed = (baseSpeed + rand(rangeSpeed));
   radius = baseRadius + rand(rangeRadius);
   hue = baseHue + rand(rangeHue);
 
@@ -168,6 +168,8 @@ function resize() {
 
   center[0] = 0.5 * canvas.a.width;
   center[1] = 0.5 * canvas.a.height;
+
+  rangeY = canvas.a.height * 0.3;
 }
 
 function renderGlow() {

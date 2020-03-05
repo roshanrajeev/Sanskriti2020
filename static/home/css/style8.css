@@ -86,6 +86,19 @@
     font-size: 2rem;
   }
 
+  @media (max-width: 479px) {
+    .timer-container li {
+        font-size: 0.8em;
+        padding: 1.5em 1em;
+      }
+      
+      .timer-container li span {
+        display: block;
+        font-size: 1rem;
+      }   
+
+  }
+  
 
   #home-welcome-message{
       margin-top: 400px;
@@ -384,7 +397,7 @@
         bottom: 30px;
     }
     #main-events{
-        margin-bottom: 200px;
+        margin-bottom: 80px;
     }
 }
 
@@ -427,9 +440,7 @@
         transform: translate(-50%,-50%);
         z-index: 1;
     }
-    #main-events{
-        margin-bottom: 90%;
-    }
+
 }
 
 
@@ -451,6 +462,7 @@
 
 #other-main-events{
     width: 100%;
+    overflow-x: hidden;
 }
 
 #other-main-events-container{
@@ -660,7 +672,11 @@
     font-family: 'Alegreya Sans', sans-serif;
     z-index: 1;
     font-size: 16px;
-    border-top: 1px solid rgba(14, 14, 20, 0.3);
+    background: rgb(0,0,0);
+background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(62,17,88,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(62,17,88,1) 100%);
+background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(62,17,88,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#3e1158",GradientType=1);
 }
 
 #contact-section div{
