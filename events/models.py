@@ -26,7 +26,7 @@ class Event(models.Model):
     brief = models.CharField(max_length=400, blank=True)
     description = models.TextField()
     rules = models.TextField(blank=True)
-    contact = models.CharField(max_length=30,blank=True)
+    contact = models.TextField(blank=True)
     date = models.CharField(max_length=50,blank=True)
     time = models.CharField(max_length=50,blank=True)
     venue = models.CharField(max_length=250,blank=True)

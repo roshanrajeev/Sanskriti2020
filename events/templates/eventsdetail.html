@@ -131,7 +131,7 @@
     }
   </style>
   <link rel='stylesheet' id='wp-block-library-css'
-    href='{% static "\details\ccs\style.min.css" %}' type='text/css'
+    href='{% static "\details\css\style.min.css" %}' type='text/css'
     media='all' />
   <link rel='stylesheet' id='thunder-bolt-style-css' href="{% static 'details/css/style.css' %}" type='text/css'
     media='all' />
@@ -139,8 +139,6 @@
     type='text/css' media='all' />
     
   <script type='text/javascript' src='{% static "\details\js\jquery.min.js" %}'></script>
-  <script type='text/javascript'
-    src='{% static "\details\js\modernizr.js" %}'></script>
   <script type='text/javascript'
     src='{% static "\details\js\cookie.js" %}'></script>
   <script type='text/javascript'
@@ -189,6 +187,14 @@
       display: inline-block;
     }
   }
+  #detail-single-event i{
+    width:30px;
+    text-align: center;
+  }
+  #detail-single-event .stage-time div{
+    margin-bottom:4px;
+  }
+
 </style>
 
 </head>
@@ -270,7 +276,9 @@
 
                 <div id="register">
                   <!-- Registration link place holder -->
-                  <a href={{ events.url }} class="button arrow-button">Register</a>
+                  {% if events.url %}
+                    <a href="{{ events.url }}" class="button yellow-button">Register <i class="fa fa-arrow-right"></i></a>
+                  {% endif %}
                 </div><!-- .header-cta -->
 
 
@@ -289,13 +297,45 @@
               <div id="detail-single-event" class="content-area column three">
 
                 <div class="stage-time">
-                  <div class="event-time-day"><i class="fa fa-calendar"></i> {{ events.date }}</div>
+                  {% if events.fees %}
+                  <div class="event-stage"><i class="fa fa-inr"></i> Reg. Fee : Rs.{{ events.fees }}</div>
+                  {% endif %}
+                  {% if events.prize %}
+                  <div class="event-stage"><i class="fa fa-gift"></i> Prizes Worth {{ events.prize }}</div>
+                  {% endif %}
 
-                  <div class="event-stage"><i class="fa fa-inr"></i> Reg. Fee : {{ events.fees }}</div>
-                  <div class="event-time-day">DATE: {{ events.date }}</div>
-                  <div class="event-time-hour">TIME: {{ events.time }}</div>
+
                 </div>
 
+                <div class="stage-time">
+                  {% if events.date %}
+                  <div class="event-time-day"><i class="fa fa-calendar"></i> {{ events.date }}</div>
+                  {% endif %}
+
+                  {% if events.time %}
+                  <div class="event-time-day"><i class="fa fa-clock-o"></i> {{ events.time }}</div>
+                  {% endif %}
+
+                  {% if events.venue %}
+                  <div class="event-time-day"><i class="fa fa-map-marker"></i>Venue : {{ events.venue }}</div>
+                  {% endif %}
+
+                </div>
+
+                <div class="stage-time">
+
+                  {% if  events.nop > 1 %}
+                  <div class="event-time-day"><i class="fa fa-users"></i> Team Size :  {{ events.nop }}</div>
+                  {% endif %}
+
+                  {% if events.duration %}
+                  <div class="event-time-day"><i class="fa fa-hourglass-o"></i>Duration : {{ events.duration }}</div>
+                  {% endif %}
+
+                </div>
+                
+
+ 
 
                 <a class="popup-video event-video-popup" id="qrcode" style="padding:10px;"></a>
 
@@ -309,9 +349,28 @@
 
                 <div class="single-content">
                   <p>{{ events.description|linebreaks }}</p>
+                </div><!-- .entry-content -->
+
+                {% if events.rules %}
+                <h3 class="bio-title">RULES</h3>
+
+
+                <div class="single-content">
                   <p>{{ events.rules|linebreaks }} </p>
                 </div><!-- .entry-content -->
 
+                {% endif %}
+
+                
+                {% if events.contact %}
+                <h3 class="bio-title">CONTACT</h3>
+
+
+                <div class="single-content">
+                  <p>{{ events.contact|linebreaks }} </p>
+                </div><!-- .entry-content -->
+
+                {% endif %}
 
               </div><!-- #content-single -->
             </div><!-- #content-container -->
