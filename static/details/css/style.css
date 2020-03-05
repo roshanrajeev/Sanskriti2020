@@ -1046,7 +1046,7 @@ TABLE OF CONTENTS:
 /* line 407, sass/_events.scss */
 #event_header_wrapper .tilt > div { background-size: cover; }
 /* line 412, sass/_events.scss */
-#event_header_wrapper .tilt__back, #event_header_wrapper .tilt__front { width: 100%; height: 100%; background-position: 50% 50%; background-repeat: no-repeat; background-size: cover; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transition: all 0.5s linear 0s; -moz-transition: all 0.5s linear 0s; -ms-transition: all 0.5s linear 0s; transition: all 0.5s linear 0s; }
+#event_header_wrapper .tilt__back, #event_header_wrapper .tilt__front { width: 100%; height: 100%; background-position: top center; background-repeat: no-repeat; background-size: cover; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transition: all 0.5s linear 0s; -moz-transition: all 0.5s linear 0s; -ms-transition: all 0.5s linear 0s; transition: all 0.5s linear 0s; }
 /* line 424, sass/_events.scss */
 #event_header_wrapper .tilt:hover .tilt__back, #event_header_wrapper .tilt:hover .tilt__front { -webkit-transition: all 0s linear 0s; -moz-transition: all 0s linear 0s; -ms-transition: all 0s linear 0s; transition: all 0s linear 0s; }
 /* line 428, sass/_events.scss */
