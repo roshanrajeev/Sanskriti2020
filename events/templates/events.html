@@ -182,7 +182,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 
 
 		#nav-close.close{
-			width: 60px;
+			/* width: 60px; */
 			position: relative;
 			top: 35px;
 			right: 60px;
@@ -219,6 +219,46 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 				width: 90%;
 			}
 		}
+
+		@media (min-width: 768px) and (max-width: 960px) {
+			#content-container-index .event-index-card .index-thumb-feature .event-details h2 { 
+				font-size: 1.25em; 
+			}
+		}
+
+		@media (min-width: 480px) and (max-width: 767px) {
+  			#content-container-index .event-index-card .index-thumb-feature .event-details h2 { 
+				font-size: 1.25em; 
+				}
+			}
+	
+		@media (max-width: 479px) {
+			#content-container-index .event-index-card .index-thumb-feature .event-details h2 { 
+				font-size: 1em; 
+			} 
+		}
+		.close-img{
+			display: none;
+		}
+		@media (max-width: 767px) {
+			.start-img{
+				display: none;
+			}
+			.close-img{
+				display: inline-block;
+			}
+		}
+		@media (max-width: 767px){
+			.burger.nav-trigger{
+				right: 0;
+				top: 0;
+			}
+			#nav-close.close{
+				right: 0;
+				top: 0;
+			}
+		}
+
 	</style>
 
 </head>
@@ -245,94 +285,7 @@ With You’re Dead! he has managed to create a shamanic pilgrimage into the p" /
 			<header id="masthead" class="site-header container" role="banner">
 
 
-				<a class="burger nav-trigger" href="javascript:;">
-					<figure></figure>
-				</a>
-
-				<nav id="modal-navigation" role="navigation">
-
-					<div id="modal-nav-header">
-						<a id="modal-nav-logo" href="{% url 'home' %}">
-							<img src='{% static "home/img/logo/butterfly-logo.png" %}' alt="" width="100px">
-						</a>
-						<a id="nav-close" class="close" href="javascript:;">
-							<figure></figure>
-						</a>
-					</div>
-
-					<div id="modal-nav-content">
-
-						<nav id="modal-nav-menu" class="column eight right" role="navigation">
-							<div id="primary-navigation">
-								<div class="menu-main-navigation-container">
-									<ul id="menu-main-navigation" class="menu">
-										<li id="menu-item-601"
-											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-601">
-											<a href="{% url 'EventView' %}">Events</a></li>
-										<li id="menu-item-1261"
-											class="menu-item menu-item-type-post_type_archive menu-item-object-events menu-item-has-children menu-item-1261">
-											<a href="lineup/index.html">About</a></li>
-										<li id="menu-item-1781"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781">
-											<a href="{% url 'arangu' %}">Arangu</a></li>
-										<li id="menu-item-443"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443">
-											<a href="{% url 'inter' %}">Inter</a></li>
-										<!--<li id="menu-item-1930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1930"><a href="{% url 'arangu' %}">Memolane</a></li>
-				<li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a href="sponsors/index.html">SPONSORS</a></li>-->
-									</ul>
-								</div>
-							</div>
-							<div id="modal-search">
-
-							</div>
-						</nav><!-- #primary-navigation -->
-
-						<nav id="modal-nav-utility" class="column eight">
-
-							<div id="welcome-message">
-								<h3>A 3-DAY EVENT<br>YOU WON’T<br>WANT TO MISS!</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-									Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-									unknown printer took a galley of type and scrambled it.</p>
-
-							</div><!-- #welcome-message -->
-
-							<div id="modal-social">
-
-								<!-- SOCIAL MEDIA LINKS -->
-								<ul class="social-nav">
-									<li><a href="https://twitter.com/MurmurationFest" target="_blank"><i
-												class="fa fa-twitter"></i></a></li>
-									<li><a href="https://www.facebook.com/sanskritimace/" target="_blank"><i
-												class="fa fa-facebook"></i></a></li>
-									<li><a href="https://www.instagram.com/sanskriti.mace/" target="_blank"><i
-												class="fa fa-instagram"></i></a></li>
-									<li><a href="mailto:info@murmurationfest.com"><i class="fa fa-envelope"></i></a>
-									</li>
-
-								</ul>
-							</div><!-- #modal-social -->
-
-							<div id="press-info">
-								<h3>PRESS</h3>
-								<p>If you are interested in applying for press credentials, please <a
-										href="press/index.html">REVIEW OUR GUIDELINES.</a></p>
-
-							</div><!-- #press-info -->
-
-							<div id='site-credit'>
-								<a>
-									<span>Website Created by</span>
-									<span>Roshan</span>
-								</a>
-							</div> <!-- #site-credit-->
-
-
-						</nav><!-- #utlitly-navigation -->
-					</div> <!-- #modal-nav-content -->
-
-				</nav><!-- #modal-navigation -->
+				{% include "nav.html" %}  
 
 
 			</header><!-- #masthead -->

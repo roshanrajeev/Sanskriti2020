@@ -384,7 +384,7 @@
         bottom: 30px;
     }
     #main-events{
-        margin-bottom: 200px;
+        margin-bottom: 50px;
     }
 }
 
@@ -428,7 +428,7 @@
         z-index: 1;
     }
     #main-events{
-        margin-bottom: 90%;
+        margin-bottom: 20%;
     }
 }
 
