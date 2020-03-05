@@ -300,7 +300,7 @@
                   {% if events.fees %}
                   <div class="event-stage"><i class="fa fa-inr"></i> Reg. Fee : Rs.{{ events.fees }}</div>
                   {% endif %}
-                  {% if events.prize %}
+                  {% if events.prize and events.prize > 0 %}
                   <div class="event-stage"><i class="fa fa-gift"></i> Prizes Worth {{ events.prize }}</div>
                   {% endif %}
 
